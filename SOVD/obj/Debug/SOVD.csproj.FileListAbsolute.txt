@@ -1,0 +1,11 @@
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\bin\Debug\SOVD.exe.config
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\bin\Debug\SOVD.exe
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\bin\Debug\SOVD.pdb
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.csprojResolveAssemblyReference.cache
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.Properties.Resources.resources
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.csproj.GenerateResource.Cache
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.exe
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.pdb
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\bin\Debug\mysql.data.dll
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmMain.resources
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmLogin.resources
