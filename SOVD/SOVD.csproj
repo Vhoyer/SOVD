@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="Accounts.cs" />
     <Compile Include="AccountsDAO.cs" />
+    <Compile Include="CadastroFuncionário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroFuncionário.designer.cs">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="DAO.cs" />
     <Compile Include="fmrMain.cs">
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="Cargo.cs" />
     <Compile Include="CargoDAO.cs" />
+    <Compile Include="frmEditarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditarConta.Designer.cs">
+      <DependentUpon>frmEditarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Livro.cs" />
     <Compile Include="LivrosDAO.cs" />
     <Compile Include="Login.cs">
@@ -71,8 +83,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadastroFuncionário.resx">
+      <DependentUpon>CadastroFuncionário.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmrMain.resx">
       <DependentUpon>fmrMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarConta.resx">
+      <DependentUpon>frmEditarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

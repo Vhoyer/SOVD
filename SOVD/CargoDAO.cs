@@ -51,5 +51,14 @@ namespace SOVD
             return tabela_memoria;
         }
 
+        public void alterarEmail(string newEmail, int id_account)
+        {
+            executarComando("UPDATE cargo set email = '" + newEmail + "' WHERE id_account = '" + id_account + "';");
+        }
+
+        public void alterar(Cargo cargo)
+        {
+            executarComando("UPDATE cargo SET nome = '" + cargo.Nome + "', sobrenome = '" + cargo.Sobrenome + "', setor = '" + cargo.Setor + "', funcao = '" + cargo.Funcao + "', cbo = '" + cargo.Cbo + "', salario_mensal = '" + cargo.Salario_mensal.ToString().Replace(',', '.') + "', horas_trabalhadas = '" + cargo.Horas_trabalhadas + "' WHERE id = '" + cargo.Id + "';");
+        }
     }
 }

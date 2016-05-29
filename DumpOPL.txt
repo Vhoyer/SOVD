@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `cargo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cargo` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_account` int(11) DEFAULT NULL,
   `nome` varchar(30) NOT NULL,
   `sobrenome` varchar(30) NOT NULL,
@@ -57,7 +57,8 @@ CREATE TABLE `cargo` (
   `horas_trabalhadas` int(11) NOT NULL,
   `email` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `email_UNIQUE` (`email`), 
+  UNIQUE KEY `id_account_UNIQUE` (`id_account`),
   KEY `id_account_idx` (`id_account`),
   CONSTRAINT `id_account` FOREIGN KEY (`id_account`) REFERENCES `accounts` (`id_accounts`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

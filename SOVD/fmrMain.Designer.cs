@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +101,7 @@
             this.btnCancel2 = new System.Windows.Forms.Button();
             this.pnlAdminConfigs = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCadNewfunc = new System.Windows.Forms.Button();
             this.btnEditFunc = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.mksSearch = new System.Windows.Forms.MaskedTextBox();
@@ -109,7 +110,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbTipoPesquisaFunc = new System.Windows.Forms.ComboBox();
             this.dgvFuncs = new System.Windows.Forms.DataGridView();
-            this.btnCadNewfunc = new System.Windows.Forms.Button();
+            this.lblPnlName1 = new System.Windows.Forms.Label();
+            this.lblPnlName2 = new System.Windows.Forms.Label();
+            this.lblPnlName3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -166,8 +169,8 @@
             // tsmiPnls
             // 
             this.tsmiPnls.Name = "tsmiPnls";
-            this.tsmiPnls.Size = new System.Drawing.Size(53, 20);
-            this.tsmiPnls.Text = "Panels";
+            this.tsmiPnls.Size = new System.Drawing.Size(84, 20);
+            this.tsmiPnls.Text = "Ferramentas";
             // 
             // pnlSearch
             // 
@@ -178,6 +181,7 @@
             this.pnlSearch.Controls.Add(this.btSearch);
             this.pnlSearch.Controls.Add(this.cbSearchType);
             this.pnlSearch.Controls.Add(this.dgSearch);
+            this.pnlSearch.Controls.Add(this.lblPnlName3);
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSearch.Location = new System.Drawing.Point(0, 24);
             this.pnlSearch.MinimumSize = new System.Drawing.Size(600, 285);
@@ -225,7 +229,7 @@
             // 
             this.mtbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mtbSearch.Location = new System.Drawing.Point(310, 32);
+            this.mtbSearch.Location = new System.Drawing.Point(310, 27);
             this.mtbSearch.Name = "mtbSearch";
             this.mtbSearch.Size = new System.Drawing.Size(381, 20);
             this.mtbSearch.TabIndex = 7;
@@ -235,7 +239,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 35);
+            this.label2.Location = new System.Drawing.Point(248, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 6;
@@ -244,7 +248,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 5;
@@ -253,7 +257,7 @@
             // btSearch
             // 
             this.btSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSearch.Location = new System.Drawing.Point(697, 30);
+            this.btSearch.Location = new System.Drawing.Point(697, 25);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(75, 23);
             this.btSearch.TabIndex = 4;
@@ -264,7 +268,7 @@
             // cbSearchType
             // 
             this.cbSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSearchType.Location = new System.Drawing.Point(15, 32);
+            this.cbSearchType.Location = new System.Drawing.Point(15, 27);
             this.cbSearchType.Name = "cbSearchType";
             this.cbSearchType.Size = new System.Drawing.Size(131, 21);
             this.cbSearchType.TabIndex = 2;
@@ -279,7 +283,7 @@
             this.dgSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgSearch.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSearch.Location = new System.Drawing.Point(15, 74);
+            this.dgSearch.Location = new System.Drawing.Point(15, 69);
             this.dgSearch.Name = "dgSearch";
             this.dgSearch.ReadOnly = true;
             this.dgSearch.Size = new System.Drawing.Size(757, 322);
@@ -580,6 +584,7 @@
             this.pnlCadBook.Controls.Add(this.button3);
             this.pnlCadBook.Controls.Add(this.lstDragDropFile);
             this.pnlCadBook.Controls.Add(this.btnCancel2);
+            this.pnlCadBook.Controls.Add(this.lblPnlName2);
             this.pnlCadBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCadBook.Location = new System.Drawing.Point(0, 24);
             this.pnlCadBook.Name = "pnlCadBook";
@@ -594,6 +599,7 @@
             this.btnCadProd.TabIndex = 80;
             this.btnCadProd.Text = "Cadastrar";
             this.btnCadProd.UseVisualStyleBackColor = true;
+            this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
             // 
             // label25
             // 
@@ -782,14 +788,15 @@
             this.button3.TabIndex = 58;
             this.button3.Text = "Procurar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnProcuraArq_Click);
             // 
             // lstDragDropFile
             // 
             this.lstDragDropFile.AllowDrop = true;
             this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
             this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3,
-            listViewItem4});
+            listViewItem7,
+            listViewItem8});
             this.lstDragDropFile.LabelWrap = false;
             this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
             this.lstDragDropFile.MultiSelect = false;
@@ -797,6 +804,8 @@
             this.lstDragDropFile.Size = new System.Drawing.Size(147, 124);
             this.lstDragDropFile.TabIndex = 57;
             this.lstDragDropFile.UseCompatibleStateImageBehavior = false;
+            this.lstDragDropFile.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDragDropFile_DragDrop);
+            this.lstDragDropFile.DragEnter += new System.Windows.Forms.DragEventHandler(this.lstDragDropFile_DragEnter);
             // 
             // btnCancel2
             // 
@@ -813,6 +822,7 @@
             this.pnlAdminConfigs.Controls.Add(this.flowLayoutPanel2);
             this.pnlAdminConfigs.Controls.Add(this.mksSearch);
             this.pnlAdminConfigs.Controls.Add(this.label13);
+            this.pnlAdminConfigs.Controls.Add(this.lblPnlName1);
             this.pnlAdminConfigs.Controls.Add(this.label14);
             this.pnlAdminConfigs.Controls.Add(this.btnSearch);
             this.pnlAdminConfigs.Controls.Add(this.cmbTipoPesquisaFunc);
@@ -835,6 +845,18 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 32);
             this.flowLayoutPanel2.TabIndex = 38;
             // 
+            // btnCadNewfunc
+            // 
+            this.btnCadNewfunc.Location = new System.Drawing.Point(699, 3);
+            this.btnCadNewfunc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
+            this.btnCadNewfunc.Name = "btnCadNewfunc";
+            this.btnCadNewfunc.Size = new System.Drawing.Size(75, 23);
+            this.btnCadNewfunc.TabIndex = 6;
+            this.btnCadNewfunc.TabStop = false;
+            this.btnCadNewfunc.Text = "Cadastrar";
+            this.btnCadNewfunc.UseVisualStyleBackColor = true;
+            this.btnCadNewfunc.Click += new System.EventHandler(this.btnCadNewfunc_Click);
+            // 
             // btnEditFunc
             // 
             this.btnEditFunc.Location = new System.Drawing.Point(611, 3);
@@ -845,6 +867,7 @@
             this.btnEditFunc.TabStop = false;
             this.btnEditFunc.Text = "Editar";
             this.btnEditFunc.UseVisualStyleBackColor = true;
+            this.btnEditFunc.Click += new System.EventHandler(this.btnEditFunc_Click);
             // 
             // btnCancel
             // 
@@ -921,28 +944,45 @@
             this.dgvFuncs.ReadOnly = true;
             this.dgvFuncs.Size = new System.Drawing.Size(757, 322);
             this.dgvFuncs.TabIndex = 32;
+            this.dgvFuncs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncs_CellDoubleClick);
             // 
-            // btnCadNewfunc
+            // lblPnlName1
             // 
-            this.btnCadNewfunc.Location = new System.Drawing.Point(699, 3);
-            this.btnCadNewfunc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
-            this.btnCadNewfunc.Name = "btnCadNewfunc";
-            this.btnCadNewfunc.Size = new System.Drawing.Size(75, 23);
-            this.btnCadNewfunc.TabIndex = 6;
-            this.btnCadNewfunc.TabStop = false;
-            this.btnCadNewfunc.Text = "Cadastrar";
-            this.btnCadNewfunc.UseVisualStyleBackColor = true;
+            this.lblPnlName1.AutoSize = true;
+            this.lblPnlName1.Location = new System.Drawing.Point(347, 30);
+            this.lblPnlName1.Name = "lblPnlName1";
+            this.lblPnlName1.Size = new System.Drawing.Size(47, 13);
+            this.lblPnlName1.TabIndex = 39;
+            this.lblPnlName1.Text = "Pessoas";
+            // 
+            // lblPnlName2
+            // 
+            this.lblPnlName2.AutoSize = true;
+            this.lblPnlName2.Location = new System.Drawing.Point(347, 38);
+            this.lblPnlName2.Name = "lblPnlName2";
+            this.lblPnlName2.Size = new System.Drawing.Size(78, 13);
+            this.lblPnlName2.TabIndex = 81;
+            this.lblPnlName2.Text = "Cadastrar Livro";
+            // 
+            // lblPnlName3
+            // 
+            this.lblPnlName3.AutoSize = true;
+            this.lblPnlName3.Location = new System.Drawing.Point(378, 30);
+            this.lblPnlName3.Name = "lblPnlName3";
+            this.lblPnlName3.Size = new System.Drawing.Size(73, 13);
+            this.lblPnlName3.TabIndex = 40;
+            this.lblPnlName3.Text = "Procurar Livro";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.pnlAdminConfigs);
-            this.Controls.Add(this.pnlSearch);
-            this.Controls.Add(this.pnlCadBook);
-            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlWelcome);
+            this.Controls.Add(this.pnlCadBook);
+            this.Controls.Add(this.pnlSearch);
+            this.Controls.Add(this.pnlAdminConfigs);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
@@ -1051,6 +1091,9 @@
         private System.Windows.Forms.ComboBox cmbTipoPesquisaFunc;
         private System.Windows.Forms.DataGridView dgvFuncs;
         private System.Windows.Forms.Button btnCadNewfunc;
+        private System.Windows.Forms.Label lblPnlName3;
+        private System.Windows.Forms.Label lblPnlName2;
+        private System.Windows.Forms.Label lblPnlName1;
     }
 }
 

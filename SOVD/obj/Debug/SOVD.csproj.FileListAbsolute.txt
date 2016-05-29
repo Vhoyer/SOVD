@@ -9,3 +9,5 @@ C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.pdb
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\bin\Debug\mysql.data.dll
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmMain.resources
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmLogin.resources
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmCadastroFuncionário.resources
+C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmEditarConta.resources

@@ -38,7 +38,14 @@ namespace SOVD
             // resposta que será armazenada na sacolinha
             comando_sql.Fill(tabela_memoria);
         }
-        
+
+        public int ReturnId(string username)
+        {
+            executarComando("SELECT * FROM accounts WHERE username = '" + username + "'");
+            return int.Parse(tabela_memoria.Rows[0]["id_accounts"].ToString());
+        }
+
+
         public enum accounttype
 	    {
 	         admin = 2, funcionario = 1, cliente = 0
@@ -50,6 +57,7 @@ namespace SOVD
 
             try
             {
+                Account.Id_accounts = int.Parse(tabela_memoria.Rows[0]["id_accounts"].ToString());
                 account.Username = tabela_memoria.Rows[0]["username"].ToString();
                 account.Password = tabela_memoria.Rows[0]["password"].ToString();
                 account.AccountType = (accounttype)Convert.ToInt32(tabela_memoria.Rows[0]["account_type"].ToString());
@@ -72,6 +80,11 @@ namespace SOVD
             executarComando("SELECT * FROM accounts");
             
             return tabela_memoria;
+        }
+
+        public void alterar(Accounts account)
+        {
+            executarComando("update accounts set password='" + account.Password + "' WHERE id_accounts = '"+account.Id_accounts+"';");
         }
     }
 }

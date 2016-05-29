@@ -12,7 +12,7 @@ namespace SOVD
 {
     public partial class frmMain : Form
     {
-        Accounts account;//okokokokok
+        Accounts account;
         int idLivro;
         public frmMain(Accounts account)
         {
@@ -54,14 +54,22 @@ namespace SOVD
             notAdd.Add("pnlWelcome");
             if (account.AccountType != AccountsDAO.accounttype.admin)
             {
-                notAdd.Add("pnlFuncControl");
+                notAdd.Add("pnlAdminConfigs");
             }
             
             foreach (Control item in this.Controls)
             {
                 if (item.Name.StartsWith("pnl") && !notAdd.Contains(item.Name))
                 {
-                    tsmiPnls.DropDownItems.Add(new ToolStripMenuItem(item.Name, null, tsmiPnls_click, item.Name));
+                    for (int i = 1; i < 4; i++)
+                    {
+                        try
+                        {
+                            tsmiPnls.DropDownItems.Add(new ToolStripMenuItem(item.Controls["lblPnlName" + i].Text, null, tsmiPnls_click, item.Name));
+                            break;
+                        }
+                        catch (System.NullReferenceException) { }
+                    }
                 }
             }
         }
@@ -262,7 +270,8 @@ namespace SOVD
 
         private void configuraçõesDaContaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            frmEditarConta frm = new frmEditarConta(account);
+            frm.ShowDialog();
         }
         #endregion
         //----------------------//
@@ -273,21 +282,14 @@ namespace SOVD
         LivrosDAO bdao = new LivrosDAO();
         private void btnCadProd_Click(object sender, EventArgs e)
         {
-
             if (txtFile.Text == string.Empty || txtTitle.Text == string.Empty || txtPrice.Text == string.Empty ||
-                txtYear.Text == string.Empty || txtAutors.Text == string.Empty || txtEdition.Text == string.Empty ||
-                txtEditora.Text == string.Empty || cmbType.Text == string.Empty || txtGenero.Text == string.Empty ||
-                txtSinopse.Text == string.Empty)
+                txtAutors.Text == string.Empty || txtEdition.Text == string.Empty || txtSinopse.Text == string.Empty)
             {
                 if (txtFile.Text == string.Empty) txtFile.BackColor = Color.Salmon;
                 if (txtTitle.Text == string.Empty) txtTitle.BackColor = Color.Salmon;
                 if (txtPrice.Text == string.Empty) txtPrice.BackColor = Color.Salmon;
-                if (txtYear.Text == string.Empty) txtYear.BackColor = Color.Salmon;
                 if (txtAutors.Text == string.Empty) txtAutors.BackColor = Color.Salmon;
                 if (txtEdition.Text == string.Empty) txtEdition.BackColor = Color.Salmon;
-                if (txtEditora.Text == string.Empty) txtEditora.BackColor = Color.Salmon;
-                if (cmbType.Text == string.Empty) cmbType.BackColor = Color.Salmon;
-                if (txtGenero.Text == string.Empty) txtGenero.BackColor = Color.Salmon;
                 if (txtSinopse.Text == string.Empty) txtSinopse.BackColor = Color.Salmon;
                 MessageBox.Show("Preencha os campos em Rosa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -341,6 +343,7 @@ namespace SOVD
             }
 
         }
+
         private void lstDragDropFile_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -352,12 +355,28 @@ namespace SOVD
         private void lstDragDropFile_DragDrop(object sender, DragEventArgs e)
         {
             string[] FileList = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            string[] supportedFormats = new string[]
+            {
+                ".pdf",".epub",".mobi"
+            };
             foreach (string File in FileList)
             {
-                if (System.IO.Path.GetExtension(File) == ".pdf")
+                if (supportedFormats.Contains(System.IO.Path.GetExtension(File)))
                     txtFile.Text = File;
                 else MessageBox.Show("Tipo de arquivo não compativel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnProcuraArq_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Arquivos PDF (*.pdf)|*.pdf|Arquivos ePUB (*.epub)|*.epub|Arquivos MOBI (*.mobi)|*.mobi | All Files (*.*)|*.*";
+            open.ShowDialog();
+            if (System.IO.Path.GetExtension(open.FileName) == ".pdf")
+            {
+                txtFile.Text = open.FileName;
+            }
+            else if (open.FileName != string.Empty) MessageBox.Show("Tipo de arquivo não compativel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public string EnderecoCadastro()
@@ -402,9 +421,27 @@ namespace SOVD
             dgSearch.DataSource = dao.Load_Table(sqlCmdLine);
         }
 
-        private void minharola()
+        private void openEdit(int cod)
         {
+            frmCadastroFuncionário frm = new frmCadastroFuncionário(cod);
+            frm.ShowDialog();
+        }
 
+        private void btnCadNewfunc_Click(object sender, EventArgs e)
+        {
+            frmCadastroFuncionário frm = new frmCadastroFuncionário();
+            frm.ShowDialog();
+            CargoDAO dao = new CargoDAO();
+            dgvFuncs.DataSource = dao.listarPraSearch();
+        }
+
+        private void dgvFuncs_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value));
+        }
+        private void btnEditFunc_Click(object sender, EventArgs e)
+        {
+            openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value));
         }
         #endregion
     }
