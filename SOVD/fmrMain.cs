@@ -284,58 +284,57 @@ namespace SOVD
         private void btnCadProd_Click(object sender, EventArgs e)
         {
             if (txtFile.Text == string.Empty || txtTitle.Text == string.Empty || txtPrice.Text == string.Empty ||
-                txtAutors.Text == string.Empty || txtEdition.Text == string.Empty || txtSinopse.Text == string.Empty)
+                txtAutors.Text == string.Empty || txtEdition.Text == string.Empty || txtAbs.Text == string.Empty)
             {
                 if (txtFile.Text == string.Empty) txtFile.BackColor = Color.Salmon;
                 if (txtTitle.Text == string.Empty) txtTitle.BackColor = Color.Salmon;
                 if (txtPrice.Text == string.Empty) txtPrice.BackColor = Color.Salmon;
                 if (txtAutors.Text == string.Empty) txtAutors.BackColor = Color.Salmon;
                 if (txtEdition.Text == string.Empty) txtEdition.BackColor = Color.Salmon;
-                if (txtSinopse.Text == string.Empty) txtSinopse.BackColor = Color.Salmon;
+                if (txtAbs.Text == string.Empty) txtAbs.BackColor = Color.Salmon;
                 MessageBox.Show("Preencha os campos em Rosa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 try
                 {
-                    if (System.IO.Path.GetExtension(txtFile.Text) == ".pdf")
+                    try
                     {
-                        try
-                        {
-                            string FileName = System.IO.Path.GetFileName(txtFile.Text);
-                            string newLocation = EnderecoCadastro() + FileName;
-                            System.IO.File.Move(txtFile.Text, EnderecoCadastro() + FileName);
-                            b.File = newLocation.ToString().Replace('\\', '/');
-                            b.Title = txtTitle.Text;
-                            b.Price = Convert.ToDouble(txtPrice.Text);
-                            if (txtSubT.Text == string.Empty) b.Subtitle = null; else b.Subtitle = txtSubT.Text;
-                            b.Year = txtYear.Text;
-                            b.Authors = txtAutors.Text;
-                            b.Edicao = Convert.ToInt32(txtEdition.Text);
-                            b.Publisher = txtEditora.Text;
-                            b.Type = Convert.ToInt32(cmbType.SelectedValue);
-                            b.Gender = txtGenero.Text;
-                            b.Sinopse = txtSinopse.Text;
-                            bdao.inserir(b);
-                            txtAutors.Text = string.Empty;
-                            txtEdition.Text = string.Empty;
-                            txtEditora.Text = string.Empty;
-                            txtFile.Text = string.Empty;
-                            txtGenero.Text = string.Empty;
-                            txtPrice.Text = string.Empty;
-                            txtSinopse.Text = string.Empty;
-                            txtSubT.Text = string.Empty;
-                            txtTitle.Text = string.Empty;
-                            txtYear.Text = string.Empty;
-                            cmbType.Text = string.Empty;
-                            MessageBox.Show("Cadastrado com sucesso");
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Reveja o endereço.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        string FileName = System.IO.Path.GetFileName(txtFile.Text);
+                        string newLocation = EnderecoCadastro() + FileName;
+                        System.IO.File.Copy(txtFile.Text, EnderecoCadastro() + FileName);
+                        b.File = newLocation.ToString().Replace('\\', '/');
+                        b.Title = txtTitle.Text;
+                        b.Price = Convert.ToDouble(txtPrice.Text);
+                        if (txtSubT.Text == string.Empty) b.Subtitle = null; else b.Subtitle = txtSubT.Text;
+                        b.Year = txtYear.Text;
+                        b.Authors = txtAutors.Text;
+                        b.Edicao = Convert.ToInt32(txtEdition.Text);
+                        b.Publisher = txtEditora.Text;
+                        b.Type = Convert.ToInt32(cmbType.SelectedValue);
+                        b.Gender = txtGenero.Text;
+                        b.Sinopse = txtSinopse.Text;
+                        bdao.inserir(b);
+                        txtAutors.Text = string.Empty;
+                        txtEdition.Text = string.Empty;
+                        txtEditora.Text = string.Empty;
+                        txtFile.Text = string.Empty;
+                        txtGenero.Text = string.Empty;
+                        txtPrice.Text = string.Empty;
+                        txtAbs.Text = string.Empty;
+                        txtSubT.Text = string.Empty;
+                        txtTitle.Text = string.Empty;
+                        txtYear.Text = string.Empty;
+                        cmbType.Text = string.Empty;
+                        MessageBox.Show("Cadastrado com sucesso");
+                        LivrosDAO livrodao = new LivrosDAO();
+                        dgSearch.DataSource = livrodao.selectAll();
+                        
                     }
-                    else MessageBox.Show("Tipo de arquivo não compativel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch
+                    {
+                        MessageBox.Show("Reveja o endereço.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                 }
                 catch (FormatException)

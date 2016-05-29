@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +46,7 @@
             this.btSearch = new System.Windows.Forms.Button();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
             this.dgSearch = new System.Windows.Forms.DataGridView();
+            this.lblPnlName3 = new System.Windows.Forms.Label();
             this.pnlEdit = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAlt = new System.Windows.Forms.Button();
@@ -88,7 +89,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.txtAutors = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAbs = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lstDragDropFile = new System.Windows.Forms.ListView();
             this.btnCancel2 = new System.Windows.Forms.Button();
+            this.lblPnlName2 = new System.Windows.Forms.Label();
             this.pnlAdminConfigs = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCadNewfunc = new System.Windows.Forms.Button();
@@ -106,13 +108,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.mksSearch = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.lblPnlName1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbTipoPesquisaFunc = new System.Windows.Forms.ComboBox();
             this.dgvFuncs = new System.Windows.Forms.DataGridView();
-            this.lblPnlName1 = new System.Windows.Forms.Label();
-            this.lblPnlName2 = new System.Windows.Forms.Label();
-            this.lblPnlName3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -289,6 +289,15 @@
             this.dgSearch.Size = new System.Drawing.Size(757, 322);
             this.dgSearch.TabIndex = 0;
             this.dgSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSearch_CellContentDoubleClick);
+            // 
+            // lblPnlName3
+            // 
+            this.lblPnlName3.AutoSize = true;
+            this.lblPnlName3.Location = new System.Drawing.Point(378, 30);
+            this.lblPnlName3.Name = "lblPnlName3";
+            this.lblPnlName3.Size = new System.Drawing.Size(73, 13);
+            this.lblPnlName3.TabIndex = 40;
+            this.lblPnlName3.Text = "Procurar Livro";
             // 
             // pnlEdit
             // 
@@ -573,7 +582,7 @@
             this.pnlCadBook.Controls.Add(this.label30);
             this.pnlCadBook.Controls.Add(this.txtAutors);
             this.pnlCadBook.Controls.Add(this.label31);
-            this.pnlCadBook.Controls.Add(this.textBox3);
+            this.pnlCadBook.Controls.Add(this.txtAbs);
             this.pnlCadBook.Controls.Add(this.label32);
             this.pnlCadBook.Controls.Add(this.txtPrice);
             this.pnlCadBook.Controls.Add(this.label33);
@@ -715,13 +724,13 @@
             this.label31.TabIndex = 67;
             this.label31.Text = "Autor(es):";
             // 
-            // textBox3
+            // txtAbs
             // 
-            this.textBox3.Location = new System.Drawing.Point(58, 258);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(519, 144);
-            this.textBox3.TabIndex = 66;
+            this.txtAbs.Location = new System.Drawing.Point(58, 258);
+            this.txtAbs.Multiline = true;
+            this.txtAbs.Name = "txtAbs";
+            this.txtAbs.Size = new System.Drawing.Size(519, 144);
+            this.txtAbs.TabIndex = 66;
             // 
             // label32
             // 
@@ -795,8 +804,8 @@
             this.lstDragDropFile.AllowDrop = true;
             this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
             this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8});
+            listViewItem1,
+            listViewItem2});
             this.lstDragDropFile.LabelWrap = false;
             this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
             this.lstDragDropFile.MultiSelect = false;
@@ -816,6 +825,15 @@
             this.btnCancel2.Text = "Cancelar";
             this.btnCancel2.UseVisualStyleBackColor = true;
             this.btnCancel2.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // lblPnlName2
+            // 
+            this.lblPnlName2.AutoSize = true;
+            this.lblPnlName2.Location = new System.Drawing.Point(347, 38);
+            this.lblPnlName2.Name = "lblPnlName2";
+            this.lblPnlName2.Size = new System.Drawing.Size(78, 13);
+            this.lblPnlName2.TabIndex = 81;
+            this.lblPnlName2.Text = "Cadastrar Livro";
             // 
             // pnlAdminConfigs
             // 
@@ -901,6 +919,15 @@
             this.label13.TabIndex = 36;
             this.label13.Text = "Pesquisa";
             // 
+            // lblPnlName1
+            // 
+            this.lblPnlName1.AutoSize = true;
+            this.lblPnlName1.Location = new System.Drawing.Point(347, 30);
+            this.lblPnlName1.Name = "lblPnlName1";
+            this.lblPnlName1.Size = new System.Drawing.Size(47, 13);
+            this.lblPnlName1.TabIndex = 39;
+            this.lblPnlName1.Text = "Pessoas";
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -946,43 +973,16 @@
             this.dgvFuncs.TabIndex = 32;
             this.dgvFuncs.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncs_CellDoubleClick);
             // 
-            // lblPnlName1
-            // 
-            this.lblPnlName1.AutoSize = true;
-            this.lblPnlName1.Location = new System.Drawing.Point(347, 30);
-            this.lblPnlName1.Name = "lblPnlName1";
-            this.lblPnlName1.Size = new System.Drawing.Size(47, 13);
-            this.lblPnlName1.TabIndex = 39;
-            this.lblPnlName1.Text = "Pessoas";
-            // 
-            // lblPnlName2
-            // 
-            this.lblPnlName2.AutoSize = true;
-            this.lblPnlName2.Location = new System.Drawing.Point(347, 38);
-            this.lblPnlName2.Name = "lblPnlName2";
-            this.lblPnlName2.Size = new System.Drawing.Size(78, 13);
-            this.lblPnlName2.TabIndex = 81;
-            this.lblPnlName2.Text = "Cadastrar Livro";
-            // 
-            // lblPnlName3
-            // 
-            this.lblPnlName3.AutoSize = true;
-            this.lblPnlName3.Location = new System.Drawing.Point(378, 30);
-            this.lblPnlName3.Name = "lblPnlName3";
-            this.lblPnlName3.Size = new System.Drawing.Size(73, 13);
-            this.lblPnlName3.TabIndex = 40;
-            this.lblPnlName3.Text = "Procurar Livro";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.pnlCadBook);
+            this.Controls.Add(this.pnlWelcome);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlAdminConfigs);
-            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
@@ -1069,7 +1069,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtAutors;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAbs;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label33;
