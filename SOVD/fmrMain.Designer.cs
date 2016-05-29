@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -188,7 +188,7 @@
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(784, 437);
             this.pnlSearch.TabIndex = 8;
-            this.pnlSearch.VisibleChanged += new System.EventHandler(this.pnlSearch_VisibleChanged);
+            this.pnlSearch.VisibleChanged += new System.EventHandler(this.pnlSearch_VisibleChanged_1);
             // 
             // flowLayoutPanel3
             // 
@@ -804,8 +804,8 @@
             this.lstDragDropFile.AllowDrop = true;
             this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
             this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem5,
+            listViewItem6});
             this.lstDragDropFile.LabelWrap = false;
             this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
             this.lstDragDropFile.MultiSelect = false;
@@ -850,6 +850,7 @@
             this.pnlAdminConfigs.Name = "pnlAdminConfigs";
             this.pnlAdminConfigs.Size = new System.Drawing.Size(784, 437);
             this.pnlAdminConfigs.TabIndex = 14;
+            this.pnlAdminConfigs.VisibleChanged += new System.EventHandler(this.pnlSearch_VisibleChanged);
             // 
             // flowLayoutPanel2
             // 
@@ -979,9 +980,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.pnlCadBook);
+            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.pnlEdit);
-            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlAdminConfigs);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

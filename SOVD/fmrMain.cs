@@ -126,6 +126,12 @@ namespace SOVD
             dgSearch.DataSource = dao.SelectForSearch();
         }
 
+        private void pnlSearch_VisibleChanged_1(object sender, EventArgs e)
+        {
+            LivrosDAO dao = new LivrosDAO();
+            dgSearch.DataSource = dao.SelectForSearch();
+        }
+
         private void open_Edit(int cod)
         {
             idLivro = cod;
