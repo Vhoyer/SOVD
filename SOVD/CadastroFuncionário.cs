@@ -22,6 +22,7 @@ namespace SOVD
             grpAccout_e_email.Enabled = false;
             cmbLevel.Enabled = false;
             edit = true;
+            this.id = id;
 
             DAO dao = new DAO();
             DataTable table = dao.Load_Table("SELECT nome, id_account, sobrenome, setor, funcao, cbo, salario_mensal, horas_trabalhadas FROM cargo WHERE id = '" + id + "';");
@@ -37,7 +38,7 @@ namespace SOVD
         Cargo func = new Cargo();
         CargoDAO funDAO = new CargoDAO();
         bool edit = false;
-        int id_account;
+        int id_account, id;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,7 +79,7 @@ namespace SOVD
                                 AccountsDAO accDao = new AccountsDAO();
                                 Accounts acc = new Accounts();
                                 if (txtCBO.Text != string.Empty)
-                                    func.Cbo = Convert.ToInt32(txtCBO.Text);
+                                    func.Cbo = txtCBO.Text;
                                 func.Email = txtEmail.Text;
                                 func.Funcao = txtFuncao.Text;
                                 if (txtHorasTrabson.Text != string.Empty)
@@ -110,7 +111,7 @@ namespace SOVD
                             AccountsDAO accDao = new AccountsDAO();
                             Accounts acc = new Accounts();
                             if (txtCBO.Text != string.Empty)
-                                func.Cbo = Convert.ToInt32(txtCBO.Text);
+                                func.Cbo = txtCBO.Text;
                             func.Email = txtEmail.Text;
                             func.Funcao = txtFuncao.Text;
                             if (txtHorasTrabson.Text != string.Empty)
@@ -158,8 +159,18 @@ namespace SOVD
                 CargoDAO dao = new CargoDAO();
                 Cargo cargo = new Cargo();
 
+                cargo.Cbo = txtCBO.Text;
+                cargo.Funcao = txtFuncao.Text;
+                cargo.Horas_trabalhadas = int.Parse(txtHorasTrabson.Text);
+                cargo.Nome = txtNomeFunc.Text;
+                cargo.Salario_mensal = double.Parse(txtSalario.Text.Replace('.',','));
+                cargo.Setor = txtSetor.Text;
+                cargo.Sobrenome = txtSobrenome.Text;
+                cargo.Id = id;
 
                 dao.alterar(cargo);
+                MessageBox.Show("Atualizado com sucesso");
+                this.Close();
             }
         }
 

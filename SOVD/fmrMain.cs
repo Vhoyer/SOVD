@@ -245,6 +245,7 @@ namespace SOVD
                     bookDAO.alterar(book);
 
                     MessageBox.Show("Dados alterados com sucesso!!");
+                    switchPnl(pnlSearch);
                 }
                 catch (FormatException)
                 {
@@ -327,6 +328,7 @@ namespace SOVD
                             txtTitle.Text = string.Empty;
                             txtYear.Text = string.Empty;
                             cmbType.Text = string.Empty;
+                            MessageBox.Show("Cadastrado com sucesso");
                         }
                         catch
                         {
@@ -425,6 +427,8 @@ namespace SOVD
         {
             frmCadastroFuncionário frm = new frmCadastroFuncionário(cod);
             frm.ShowDialog();
+            CargoDAO dao = new CargoDAO();
+            dgvFuncs.DataSource = dao.listarPraSearch();
         }
 
         private void btnCadNewfunc_Click(object sender, EventArgs e)

@@ -9,8 +9,8 @@ namespace SOVD
     class Cargo
     {
 
-        string nome, sobrenome, setor, funcao, email;
-        int id, cbo, horas_trabalhadas, id_account;
+        string nome, sobrenome, setor, funcao, email, cbo;
+        int id, horas_trabalhadas, id_account;
         double salario_mensal;
 
 
@@ -99,7 +99,7 @@ namespace SOVD
             }
         }
 
-        public int Cbo
+        public string Cbo
         {
             get
             {
