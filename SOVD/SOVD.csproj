@@ -59,8 +59,8 @@
     <Compile Include="fmrMain.Designer.cs">
       <DependentUpon>fmrMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gerente.cs" />
-    <Compile Include="GerenteDAO.cs" />
+    <Compile Include="Cargo.cs" />
+    <Compile Include="CargoDAO.cs" />
     <Compile Include="Livro.cs" />
     <Compile Include="LivrosDAO.cs" />
     <Compile Include="Login.cs">

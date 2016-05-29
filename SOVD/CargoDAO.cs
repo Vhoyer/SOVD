@@ -8,9 +8,8 @@ using MySql.Data.MySqlClient;
 
 namespace SOVD
 {
-    class GerenteDAO
+    class CargoDAO
     {
-
         // variaveis para acessar o MySql
         MySqlDataAdapter comando_sql;
         MySqlCommandBuilder executar_comando;
@@ -33,18 +32,22 @@ namespace SOVD
         }
 
 
-        private void inserir(Gerente gerent)
+        public void inserir(Cargo cargo)
         {
-            executarComando("INSERT INTO gerente VALUES (0,'" + gerent.Nome_gerente + "','"
-                + gerent.Sobrenome_gerente + "','" + gerent.Setor + "',','" + gerent.Cbo + "','"
-                + gerent.Salario_mensal.ToString().Replace(',', '.') + "','"
-                + gerent.Horas_trabalhadas + "','" + gerent.Usuario + "','" + gerent.Email + "','"
-                + gerent.Senha + "',');");
+            executarComando("INSERT INTO opl.cargo (id_account, nome, sobrenome, setor, cbo, salario_mensal, horas_trabalhadas, email)"
+                                              + " VALUES ("+cargo.Id_account+", '"+cargo.Nome+"', '"+cargo.Sobrenome+"', '"+cargo.Setor
+                                              + "', '"+cargo.Cbo+"', '"+cargo.Salario_mensal+"', '"+cargo.Horas_trabalhadas+"', '"+cargo.Email+"');");
         }
 
-        private DataTable listarTudo()
+        public DataTable listarPraSearch()
         {
-            executarComando("SELECT * FROM GERENTE;");
+            executarComando("SELECT id, nome, sobrenome, setor, cbo, email FROM cargo");
+            return tabela_memoria;
+        }
+
+        public DataTable listarTudo()
+        {
+            executarComando("SELECT * FROM cargo;");
             return tabela_memoria;
         }
 

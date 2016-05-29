@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,7 +37,6 @@
             this.trocarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPnls = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSearch = new System.Windows.Forms.Panel();
-            this.chkMask = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btEdit = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
@@ -51,9 +52,7 @@
             this.btnExc = new System.Windows.Forms.Button();
             this.btnCancelarAlt = new System.Windows.Forms.Button();
             this.txtAno = new System.Windows.Forms.TextBox();
-            this.btnPesq = new System.Windows.Forms.Button();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.txtArquivo = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtSubtitulo = new System.Windows.Forms.TextBox();
             this.txtAutores = new System.Windows.Forms.TextBox();
@@ -72,55 +71,55 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblArquivo = new System.Windows.Forms.Label();
             this.pnlWelcome = new System.Windows.Forms.Panel();
-            this.pnlAccountSettings = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.pnlCadBook = new System.Windows.Forms.Panel();
+            this.btnCadProd = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.txtEdition = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtSubT = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtAutors = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtFile = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.lstDragDropFile = new System.Windows.Forms.ListView();
+            this.btnCancel2 = new System.Windows.Forms.Button();
+            this.pnlAdminConfigs = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnEditFunc = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.pnlCadGerente = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.mksSearch = new System.Windows.Forms.MaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtHorasTG = new System.Windows.Forms.TextBox();
-            this.txtSalarioG = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtCsenhaG = new System.Windows.Forms.TextBox();
-            this.txtCemailG = new System.Windows.Forms.TextBox();
-            this.txtUsuarioG = new System.Windows.Forms.TextBox();
-            this.txtEmailG = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtSenhaG = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSetorG = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtnomeG = new System.Windows.Forms.TextBox();
-            this.txtSobrenomeG = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtCboG = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbTipoPesquisaFunc = new System.Windows.Forms.ComboBox();
+            this.dgvFuncs = new System.Windows.Forms.DataGridView();
+            this.btnCadNewfunc = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSearch)).BeginInit();
             this.pnlEdit.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnlAccountSettings.SuspendLayout();
+            this.pnlCadBook.SuspendLayout();
+            this.pnlAdminConfigs.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.pnlCadGerente.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncs)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -172,7 +171,6 @@
             // 
             // pnlSearch
             // 
-            this.pnlSearch.Controls.Add(this.chkMask);
             this.pnlSearch.Controls.Add(this.flowLayoutPanel3);
             this.pnlSearch.Controls.Add(this.mtbSearch);
             this.pnlSearch.Controls.Add(this.label2);
@@ -186,19 +184,7 @@
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(784, 437);
             this.pnlSearch.TabIndex = 8;
-            // 
-            // chkMask
-            // 
-            this.chkMask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkMask.AutoSize = true;
-            this.chkMask.Checked = true;
-            this.chkMask.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMask.Location = new System.Drawing.Point(625, 9);
-            this.chkMask.Name = "chkMask";
-            this.chkMask.Size = new System.Drawing.Size(108, 17);
-            this.chkMask.TabIndex = 31;
-            this.chkMask.Text = "Mascara de texto";
-            this.chkMask.UseVisualStyleBackColor = true;
+            this.pnlSearch.VisibleChanged += new System.EventHandler(this.pnlSearch_VisibleChanged);
             // 
             // flowLayoutPanel3
             // 
@@ -304,9 +290,7 @@
             // 
             this.pnlEdit.Controls.Add(this.flowLayoutPanel1);
             this.pnlEdit.Controls.Add(this.txtAno);
-            this.pnlEdit.Controls.Add(this.btnPesq);
             this.pnlEdit.Controls.Add(this.cmbTipo);
-            this.pnlEdit.Controls.Add(this.txtArquivo);
             this.pnlEdit.Controls.Add(this.txtTitulo);
             this.pnlEdit.Controls.Add(this.txtSubtitulo);
             this.pnlEdit.Controls.Add(this.txtAutores);
@@ -325,7 +309,6 @@
             this.pnlEdit.Controls.Add(this.label4);
             this.pnlEdit.Controls.Add(this.label3);
             this.pnlEdit.Controls.Add(this.label12);
-            this.pnlEdit.Controls.Add(this.lblArquivo);
             this.pnlEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEdit.Location = new System.Drawing.Point(0, 24);
             this.pnlEdit.Name = "pnlEdit";
@@ -386,34 +369,15 @@
             this.txtAno.Size = new System.Drawing.Size(183, 20);
             this.txtAno.TabIndex = 52;
             // 
-            // btnPesq
-            // 
-            this.btnPesq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPesq.Location = new System.Drawing.Point(663, 9);
-            this.btnPesq.Name = "btnPesq";
-            this.btnPesq.Size = new System.Drawing.Size(75, 23);
-            this.btnPesq.TabIndex = 51;
-            this.btnPesq.Text = "Procurar";
-            this.btnPesq.UseVisualStyleBackColor = true;
-            this.btnPesq.Click += new System.EventHandler(this.btnProcurar_Click);
-            // 
             // cmbTipo
             // 
             this.cmbTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(555, 141);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(183, 21);
             this.cmbTipo.TabIndex = 50;
-            // 
-            // txtArquivo
-            // 
-            this.txtArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtArquivo.Location = new System.Drawing.Point(108, 9);
-            this.txtArquivo.Name = "txtArquivo";
-            this.txtArquivo.Size = new System.Drawing.Size(522, 20);
-            this.txtArquivo.TabIndex = 47;
             // 
             // txtTitulo
             // 
@@ -580,15 +544,6 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Título:";
             // 
-            // lblArquivo
-            // 
-            this.lblArquivo.AutoSize = true;
-            this.lblArquivo.Location = new System.Drawing.Point(46, 12);
-            this.lblArquivo.Name = "lblArquivo";
-            this.lblArquivo.Size = new System.Drawing.Size(46, 13);
-            this.lblArquivo.TabIndex = 28;
-            this.lblArquivo.Text = "Arquivo:";
-            // 
             // pnlWelcome
             // 
             this.pnlWelcome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -597,50 +552,303 @@
             this.pnlWelcome.Size = new System.Drawing.Size(784, 437);
             this.pnlWelcome.TabIndex = 10;
             // 
-            // pnlAccountSettings
+            // pnlCadBook
             // 
-            this.pnlAccountSettings.Controls.Add(this.flowLayoutPanel2);
-            this.pnlAccountSettings.Controls.Add(this.label13);
-            this.pnlAccountSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAccountSettings.Location = new System.Drawing.Point(0, 24);
-            this.pnlAccountSettings.Name = "pnlAccountSettings";
-            this.pnlAccountSettings.Size = new System.Drawing.Size(784, 437);
-            this.pnlAccountSettings.TabIndex = 11;
+            this.pnlCadBook.Controls.Add(this.btnCadProd);
+            this.pnlCadBook.Controls.Add(this.label25);
+            this.pnlCadBook.Controls.Add(this.cmbType);
+            this.pnlCadBook.Controls.Add(this.txtEdition);
+            this.pnlCadBook.Controls.Add(this.label26);
+            this.pnlCadBook.Controls.Add(this.textBox1);
+            this.pnlCadBook.Controls.Add(this.label27);
+            this.pnlCadBook.Controls.Add(this.txtYear);
+            this.pnlCadBook.Controls.Add(this.label28);
+            this.pnlCadBook.Controls.Add(this.label29);
+            this.pnlCadBook.Controls.Add(this.txtSubT);
+            this.pnlCadBook.Controls.Add(this.textBox2);
+            this.pnlCadBook.Controls.Add(this.label30);
+            this.pnlCadBook.Controls.Add(this.txtAutors);
+            this.pnlCadBook.Controls.Add(this.label31);
+            this.pnlCadBook.Controls.Add(this.textBox3);
+            this.pnlCadBook.Controls.Add(this.label32);
+            this.pnlCadBook.Controls.Add(this.txtPrice);
+            this.pnlCadBook.Controls.Add(this.label33);
+            this.pnlCadBook.Controls.Add(this.label34);
+            this.pnlCadBook.Controls.Add(this.txtTitle);
+            this.pnlCadBook.Controls.Add(this.label35);
+            this.pnlCadBook.Controls.Add(this.txtFile);
+            this.pnlCadBook.Controls.Add(this.button3);
+            this.pnlCadBook.Controls.Add(this.lstDragDropFile);
+            this.pnlCadBook.Controls.Add(this.btnCancel2);
+            this.pnlCadBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCadBook.Location = new System.Drawing.Point(0, 24);
+            this.pnlCadBook.Name = "pnlCadBook";
+            this.pnlCadBook.Size = new System.Drawing.Size(784, 437);
+            this.pnlCadBook.TabIndex = 13;
             // 
-            // label13
+            // btnCadProd
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(195, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Aqui fica as opções de edição de conta";
+            this.btnCadProd.Location = new System.Drawing.Point(615, 258);
+            this.btnCadProd.Name = "btnCadProd";
+            this.btnCadProd.Size = new System.Drawing.Size(115, 69);
+            this.btnCadProd.TabIndex = 80;
+            this.btnCadProd.Text = "Cadastrar";
+            this.btnCadProd.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(413, 174);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(31, 13);
+            this.label25.TabIndex = 79;
+            this.label25.Text = "Tipo:";
+            // 
+            // cmbType
+            // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.Location = new System.Drawing.Point(462, 169);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(115, 21);
+            this.cmbType.TabIndex = 55;
+            // 
+            // txtEdition
+            // 
+            this.txtEdition.Location = new System.Drawing.Point(462, 137);
+            this.txtEdition.Name = "txtEdition";
+            this.txtEdition.Size = new System.Drawing.Size(115, 20);
+            this.txtEdition.TabIndex = 78;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(413, 140);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(43, 13);
+            this.label26.TabIndex = 77;
+            this.label26.Text = "Edição:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(113, 205);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(338, 20);
+            this.textBox1.TabIndex = 76;
+            this.textBox1.Text = " ";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(55, 208);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(56, 13);
+            this.label27.TabIndex = 75;
+            this.label27.Text = "Genero(s):";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(462, 103);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(115, 20);
+            this.txtYear.TabIndex = 74;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(413, 106);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(29, 13);
+            this.label28.TabIndex = 73;
+            this.label28.Text = "Ano:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(55, 107);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(51, 13);
+            this.label29.TabIndex = 72;
+            this.label29.Text = "Subtitulo:";
+            // 
+            // txtSubT
+            // 
+            this.txtSubT.Location = new System.Drawing.Point(113, 103);
+            this.txtSubT.Name = "txtSubT";
+            this.txtSubT.Size = new System.Drawing.Size(294, 20);
+            this.txtSubT.TabIndex = 71;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(113, 171);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(294, 20);
+            this.textBox2.TabIndex = 70;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(55, 174);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(43, 13);
+            this.label30.TabIndex = 69;
+            this.label30.Text = "Editora:";
+            // 
+            // txtAutors
+            // 
+            this.txtAutors.Location = new System.Drawing.Point(113, 137);
+            this.txtAutors.Name = "txtAutors";
+            this.txtAutors.Size = new System.Drawing.Size(294, 20);
+            this.txtAutors.TabIndex = 68;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(55, 140);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(52, 13);
+            this.label31.TabIndex = 67;
+            this.label31.Text = "Autor(es):";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(58, 258);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(519, 144);
+            this.textBox3.TabIndex = 66;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(55, 242);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(48, 13);
+            this.label32.TabIndex = 65;
+            this.label32.Text = "Sinopse:";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(462, 69);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(115, 20);
+            this.txtPrice.TabIndex = 64;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(413, 72);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(38, 13);
+            this.label33.TabIndex = 63;
+            this.label33.Text = "Preço:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(55, 72);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(36, 13);
+            this.label34.TabIndex = 62;
+            this.label34.Text = "Titulo:";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(113, 69);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(294, 20);
+            this.txtTitle.TabIndex = 61;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(55, 38);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(46, 13);
+            this.label35.TabIndex = 60;
+            this.label35.Text = "Arquivo:";
+            // 
+            // txtFile
+            // 
+            this.txtFile.Location = new System.Drawing.Point(113, 35);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.Size = new System.Drawing.Size(464, 20);
+            this.txtFile.TabIndex = 59;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(615, 35);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 23);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "Procurar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lstDragDropFile
+            // 
+            this.lstDragDropFile.AllowDrop = true;
+            this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
+            this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem3,
+            listViewItem4});
+            this.lstDragDropFile.LabelWrap = false;
+            this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
+            this.lstDragDropFile.MultiSelect = false;
+            this.lstDragDropFile.Name = "lstDragDropFile";
+            this.lstDragDropFile.Size = new System.Drawing.Size(147, 124);
+            this.lstDragDropFile.TabIndex = 57;
+            this.lstDragDropFile.UseCompatibleStateImageBehavior = false;
+            // 
+            // btnCancel2
+            // 
+            this.btnCancel2.Location = new System.Drawing.Point(615, 333);
+            this.btnCancel2.Name = "btnCancel2";
+            this.btnCancel2.Size = new System.Drawing.Size(115, 69);
+            this.btnCancel2.TabIndex = 56;
+            this.btnCancel2.Text = "Cancelar";
+            this.btnCancel2.UseVisualStyleBackColor = true;
+            this.btnCancel2.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // pnlAdminConfigs
+            // 
+            this.pnlAdminConfigs.Controls.Add(this.flowLayoutPanel2);
+            this.pnlAdminConfigs.Controls.Add(this.mksSearch);
+            this.pnlAdminConfigs.Controls.Add(this.label13);
+            this.pnlAdminConfigs.Controls.Add(this.label14);
+            this.pnlAdminConfigs.Controls.Add(this.btnSearch);
+            this.pnlAdminConfigs.Controls.Add(this.cmbTipoPesquisaFunc);
+            this.pnlAdminConfigs.Controls.Add(this.dgvFuncs);
+            this.pnlAdminConfigs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAdminConfigs.Location = new System.Drawing.Point(0, 24);
+            this.pnlAdminConfigs.Name = "pnlAdminConfigs";
+            this.pnlAdminConfigs.Size = new System.Drawing.Size(784, 437);
+            this.pnlAdminConfigs.TabIndex = 14;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.btnSave);
+            this.flowLayoutPanel2.Controls.Add(this.btnCadNewfunc);
+            this.flowLayoutPanel2.Controls.Add(this.btnEditFunc);
             this.flowLayoutPanel2.Controls.Add(this.btnCancel);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 405);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 32);
-            this.flowLayoutPanel2.TabIndex = 31;
+            this.flowLayoutPanel2.TabIndex = 38;
             // 
-            // btnSave
+            // btnEditFunc
             // 
-            this.btnSave.Location = new System.Drawing.Point(699, 3);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.TabStop = false;
-            this.btnSave.Text = "Salvar";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnEditFunc.Location = new System.Drawing.Point(611, 3);
+            this.btnEditFunc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
+            this.btnEditFunc.Name = "btnEditFunc";
+            this.btnEditFunc.Size = new System.Drawing.Size(75, 23);
+            this.btnEditFunc.TabIndex = 4;
+            this.btnEditFunc.TabStop = false;
+            this.btnEditFunc.Text = "Editar";
+            this.btnEditFunc.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(611, 3);
+            this.btnCancel.Location = new System.Drawing.Point(523, 3);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -650,302 +858,89 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pnlCadGerente
+            // mksSearch
             // 
-            this.pnlCadGerente.Controls.Add(this.groupBox3);
-            this.pnlCadGerente.Controls.Add(this.groupBox2);
-            this.pnlCadGerente.Controls.Add(this.groupBox1);
-            this.pnlCadGerente.Controls.Add(this.flowLayoutPanel4);
-            this.pnlCadGerente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCadGerente.Location = new System.Drawing.Point(0, 24);
-            this.pnlCadGerente.Name = "pnlCadGerente";
-            this.pnlCadGerente.Size = new System.Drawing.Size(784, 437);
-            this.pnlCadGerente.TabIndex = 12;
+            this.mksSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mksSearch.Location = new System.Drawing.Point(310, 27);
+            this.mksSearch.Name = "mksSearch";
+            this.mksSearch.Size = new System.Drawing.Size(381, 20);
+            this.mksSearch.TabIndex = 37;
             // 
-            // flowLayoutPanel4
+            // label13
             // 
-            this.flowLayoutPanel4.Controls.Add(this.button1);
-            this.flowLayoutPanel4.Controls.Add(this.button2);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 405);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(784, 32);
-            this.flowLayoutPanel4.TabIndex = 32;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(699, 3);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.TabStop = false;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(611, 3);
-            this.button2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.TabStop = false;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.txtHorasTG);
-            this.groupBox3.Controls.Add(this.txtSalarioG);
-            this.groupBox3.Location = new System.Drawing.Point(15, 165);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(253, 73);
-            this.groupBox3.TabIndex = 36;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Salário";
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(248, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Pesquisa";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 42);
+            this.label14.Location = new System.Drawing.Point(12, 7);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(136, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Horas trabalhadas por mês:";
+            this.label14.Size = new System.Drawing.Size(100, 13);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Campo de pesquisa";
             // 
-            // label15
+            // btnSearch
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 19);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Salário mensal:";
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Location = new System.Drawing.Point(697, 25);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 34;
+            this.btnSearch.Text = "Pesquisar";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btSearchfunc_Click);
             // 
-            // txtHorasTG
+            // cmbTipoPesquisaFunc
             // 
-            this.txtHorasTG.Location = new System.Drawing.Point(148, 42);
-            this.txtHorasTG.Name = "txtHorasTG";
-            this.txtHorasTG.Size = new System.Drawing.Size(100, 20);
-            this.txtHorasTG.TabIndex = 19;
+            this.cmbTipoPesquisaFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoPesquisaFunc.Location = new System.Drawing.Point(15, 27);
+            this.cmbTipoPesquisaFunc.Name = "cmbTipoPesquisaFunc";
+            this.cmbTipoPesquisaFunc.Size = new System.Drawing.Size(131, 21);
+            this.cmbTipoPesquisaFunc.TabIndex = 33;
             // 
-            // txtSalarioG
+            // dgvFuncs
             // 
-            this.txtSalarioG.Location = new System.Drawing.Point(111, 19);
-            this.txtSalarioG.Name = "txtSalarioG";
-            this.txtSalarioG.Size = new System.Drawing.Size(100, 20);
-            this.txtSalarioG.TabIndex = 18;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtCsenhaG);
-            this.groupBox2.Controls.Add(this.txtCemailG);
-            this.groupBox2.Controls.Add(this.txtUsuarioG);
-            this.groupBox2.Controls.Add(this.txtEmailG);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.txtSenhaG);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Location = new System.Drawing.Point(416, 9);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(356, 151);
-            this.groupBox2.TabIndex = 33;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Informações da cadastro";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(90, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Nome de usuário:";
-            // 
-            // txtCsenhaG
-            // 
-            this.txtCsenhaG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvFuncs.AllowUserToAddRows = false;
+            this.dgvFuncs.AllowUserToDeleteRows = false;
+            this.dgvFuncs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCsenhaG.Location = new System.Drawing.Point(102, 120);
-            this.txtCsenhaG.Name = "txtCsenhaG";
-            this.txtCsenhaG.Size = new System.Drawing.Size(240, 20);
-            this.txtCsenhaG.TabIndex = 14;
+            this.dgvFuncs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvFuncs.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvFuncs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncs.Location = new System.Drawing.Point(15, 69);
+            this.dgvFuncs.Name = "dgvFuncs";
+            this.dgvFuncs.ReadOnly = true;
+            this.dgvFuncs.Size = new System.Drawing.Size(757, 322);
+            this.dgvFuncs.TabIndex = 32;
             // 
-            // txtCemailG
+            // btnCadNewfunc
             // 
-            this.txtCemailG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCemailG.Location = new System.Drawing.Point(102, 68);
-            this.txtCemailG.Name = "txtCemailG";
-            this.txtCemailG.Size = new System.Drawing.Size(240, 20);
-            this.txtCemailG.TabIndex = 1;
-            // 
-            // txtUsuarioG
-            // 
-            this.txtUsuarioG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuarioG.Location = new System.Drawing.Point(102, 16);
-            this.txtUsuarioG.Name = "txtUsuarioG";
-            this.txtUsuarioG.Size = new System.Drawing.Size(240, 20);
-            this.txtUsuarioG.TabIndex = 4;
-            // 
-            // txtEmailG
-            // 
-            this.txtEmailG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailG.Location = new System.Drawing.Point(102, 42);
-            this.txtEmailG.Name = "txtEmailG";
-            this.txtEmailG.Size = new System.Drawing.Size(240, 20);
-            this.txtEmailG.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 120);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 13);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Confirmar senha:";
-            // 
-            // txtSenhaG
-            // 
-            this.txtSenhaG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenhaG.Location = new System.Drawing.Point(102, 94);
-            this.txtSenhaG.Name = "txtSenhaG";
-            this.txtSenhaG.Size = new System.Drawing.Size(240, 20);
-            this.txtSenhaG.TabIndex = 5;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 97);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "Senha:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 71);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(84, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "Confirmar e-mail:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(15, 45);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 13);
-            this.label20.TabIndex = 8;
-            this.label20.Text = "E-mail:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtSetorG);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.txtnomeG);
-            this.groupBox1.Controls.Add(this.txtSobrenomeG);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.txtCboG);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Location = new System.Drawing.Point(15, 9);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 151);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dados gerais:";
-            // 
-            // txtSetorG
-            // 
-            this.txtSetorG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSetorG.Location = new System.Drawing.Point(93, 76);
-            this.txtSetorG.Name = "txtSetorG";
-            this.txtSetorG.Size = new System.Drawing.Size(279, 20);
-            this.txtSetorG.TabIndex = 17;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 79);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 13);
-            this.label21.TabIndex = 16;
-            this.label21.Text = "Setor:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 27);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(38, 13);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Nome:";
-            // 
-            // txtnomeG
-            // 
-            this.txtnomeG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnomeG.Location = new System.Drawing.Point(93, 24);
-            this.txtnomeG.Name = "txtnomeG";
-            this.txtnomeG.Size = new System.Drawing.Size(279, 20);
-            this.txtnomeG.TabIndex = 0;
-            // 
-            // txtSobrenomeG
-            // 
-            this.txtSobrenomeG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSobrenomeG.Location = new System.Drawing.Point(93, 50);
-            this.txtSobrenomeG.Name = "txtSobrenomeG";
-            this.txtSobrenomeG.Size = new System.Drawing.Size(279, 20);
-            this.txtSobrenomeG.TabIndex = 1;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 105);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(32, 13);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "CBO:";
-            // 
-            // txtCboG
-            // 
-            this.txtCboG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCboG.Location = new System.Drawing.Point(93, 102);
-            this.txtCboG.Name = "txtCboG";
-            this.txtCboG.Size = new System.Drawing.Size(279, 20);
-            this.txtCboG.TabIndex = 3;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 53);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(64, 13);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "Sobrenome:";
+            this.btnCadNewfunc.Location = new System.Drawing.Point(699, 3);
+            this.btnCadNewfunc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
+            this.btnCadNewfunc.Name = "btnCadNewfunc";
+            this.btnCadNewfunc.Size = new System.Drawing.Size(75, 23);
+            this.btnCadNewfunc.TabIndex = 6;
+            this.btnCadNewfunc.TabStop = false;
+            this.btnCadNewfunc.Text = "Cadastrar";
+            this.btnCadNewfunc.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.pnlCadGerente);
-            this.Controls.Add(this.pnlAccountSettings);
+            this.Controls.Add(this.pnlAdminConfigs);
             this.Controls.Add(this.pnlSearch);
+            this.Controls.Add(this.pnlCadBook);
             this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.menuStrip1);
@@ -963,17 +958,12 @@
             this.pnlEdit.ResumeLayout(false);
             this.pnlEdit.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnlAccountSettings.ResumeLayout(false);
-            this.pnlAccountSettings.PerformLayout();
+            this.pnlCadBook.ResumeLayout(false);
+            this.pnlCadBook.PerformLayout();
+            this.pnlAdminConfigs.ResumeLayout(false);
+            this.pnlAdminConfigs.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.pnlCadGerente.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -985,7 +975,6 @@
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiPnls;
         private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.CheckBox chkMask;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btCancel;
@@ -1001,9 +990,7 @@
         private System.Windows.Forms.Button btnExc;
         private System.Windows.Forms.Button btnCancelarAlt;
         private System.Windows.Forms.TextBox txtAno;
-        private System.Windows.Forms.Button btnPesq;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.TextBox txtArquivo;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtSubtitulo;
         private System.Windows.Forms.TextBox txtAutores;
@@ -1022,45 +1009,48 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblArquivo;
         private System.Windows.Forms.Panel pnlWelcome;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesDaContaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem trocarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.Panel pnlAccountSettings;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnlCadBook;
+        private System.Windows.Forms.Button btnCadProd;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.TextBox txtEdition;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtSubT;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtAutors;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtFile;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView lstDragDropFile;
+        private System.Windows.Forms.Button btnCancel2;
+        private System.Windows.Forms.Panel pnlAdminConfigs;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnEditFunc;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Panel pnlCadGerente;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.MaskedTextBox mksSearch;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtHorasTG;
-        private System.Windows.Forms.TextBox txtSalarioG;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtCsenhaG;
-        private System.Windows.Forms.TextBox txtCemailG;
-        private System.Windows.Forms.TextBox txtUsuarioG;
-        private System.Windows.Forms.TextBox txtEmailG;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtSenhaG;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtSetorG;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtnomeG;
-        private System.Windows.Forms.TextBox txtSobrenomeG;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtCboG;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox cmbTipoPesquisaFunc;
+        private System.Windows.Forms.DataGridView dgvFuncs;
+        private System.Windows.Forms.Button btnCadNewfunc;
     }
 }
 

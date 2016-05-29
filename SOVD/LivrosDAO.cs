@@ -5,6 +5,11 @@ namespace SOVD
 {
     public class LivrosDAO : DAO
     {
+        public void inserir(Livro b)
+        {
+            Load_Table("insert into prod values(0,'" + b.File + "','" + b.Title + "','" + b.Subtitle + "','" + b.Authors + "','" + b.Publisher + "','" + b.Gender + "','" + b.Price + "','" + b.Year + "','" + b.Edicao + "','" + b.Type + "','" + b.Sinopse + "');");
+        }
+
         public DataTable selectAll()
         {
             return Load_Table("SELECT "

@@ -25,14 +25,26 @@ namespace SOVD
         {
             pnlWelcome.BringToFront();
             Conexao.criar_Conexao();
-            LivrosDAO dao = new LivrosDAO();
-            dgSearch.DataSource = dao.selectAll();
+            LivrosDAO livrodao = new LivrosDAO();
+            dgSearch.DataSource = livrodao.selectAll();
 
             foreach (DataColumn item in (dgSearch.DataSource as DataTable).Columns)
             {
                 cbSearchType.Items.Add(item.ColumnName);
             }
             cbSearchType.SelectedIndex = 1;
+            
+            if (!System.IO.Directory.Exists(EnderecoCadastro()))
+            {
+                System.IO.Directory.CreateDirectory(EnderecoCadastro());
+            }
+            DAO dao = new DAO();
+            cmbType.DataSource = dao.Load_Table("SELECT * FROM tipoprod");
+            cmbType.ValueMember = "idTipoProd";
+            cmbType.DisplayMember = "TipoProd";
+            cmbTipo.DataSource = dao.Load_Table("SELECT * FROM tipoprod");
+            cmbTipo.ValueMember = "idTipoProd";
+            cmbTipo.DisplayMember = "TipoProd";
         }
 
         private void initiatePanels()
@@ -40,10 +52,9 @@ namespace SOVD
             List<string> notAdd = new List<string>();
             notAdd.Add("pnlEdit");
             notAdd.Add("pnlWelcome");
-            notAdd.Add("pnlAccountSettings");
             if (account.AccountType != AccountsDAO.accounttype.admin)
             {
-                notAdd.Add("pnlCadGerente");
+                notAdd.Add("pnlFuncControl");
             }
             
             foreach (Control item in this.Controls)
@@ -114,8 +125,6 @@ namespace SOVD
             Livro livro = new Livro(){ Id = cod };
             switchPnl(pnlEdit);
             dao.Search(livro);
-
-            txtArquivo.Text = livro.File;
             txtAno.Text = livro.Year;
             txtAutores.Text = livro.Authors; 
             txtEditora.Text = livro.Publisher.ToString();
@@ -125,6 +134,7 @@ namespace SOVD
             txtSinopse.Text = livro.Sinopse;
             txtSubtitulo.Text = livro.Subtitle;
             txtTitulo.Text = livro.Title;
+            cmbTipo.SelectedValue = livro.Type;
         }
 
         private void dgSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -162,27 +172,6 @@ namespace SOVD
         //----------------------//
         //----------------------//
         #region "BookEdit"
-        private void btnProcurar_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog pesquisar = new OpenFileDialog();
-
-            pesquisar.Title = "Pesquisar um arquivo";
-
-            pesquisar.InitialDirectory = @"C:\";
-
-            pesquisar.Filter = "Arquivos PDF (*.pdf)|*.pdf|Arquivos ePUB (*.epub)|*.epub|Arquivos MOBI (*.mobi)|*.mobi";
-
-            DialogResult resp = pesquisar.ShowDialog();
-
-            if (resp == DialogResult.OK)
-            {
-                string caminho = pesquisar.FileName;
-
-                txtArquivo.Text = caminho.ToString();
-            }
-
-        }
-
         private void btnExc_Click(object sender, EventArgs e)
         {
             DialogResult exc;
@@ -206,8 +195,7 @@ namespace SOVD
         private void btnAlt_Click(object sender, EventArgs e)
         {
 
-            if (txtArquivo.Text == string.Empty ||
-                txtAutores.Text == string.Empty ||
+            if (txtAutores.Text == string.Empty ||
                 txtEdição.Text == string.Empty ||
                 txtPreco.Text == string.Empty ||
                 txtSinopse.Text == string.Empty ||
@@ -215,7 +203,6 @@ namespace SOVD
             {
                 MessageBox.Show("Os campos Destacados são obrigatorios e devem ser preenchidos");
 
-                txtArquivo.BackColor = Color.Salmon;
                 txtAutores.BackColor = Color.Salmon;
                 txtEdição.BackColor = Color.Salmon;
                 txtPreco.BackColor = Color.Salmon;
@@ -238,10 +225,8 @@ namespace SOVD
                     book.Price = Convert.ToDouble(txtPreco.Text);
                     book.Year = txtAno.Text;
                     book.Edicao = Convert.ToInt32(txtEdição.Text);
-                    book.File = txtArquivo.Text;
                     book.Type = Convert.ToInt32(cmbTipo.SelectedValue);
                     //----
-                    txtArquivo.BackColor = Color.Empty;
                     txtAutores.BackColor = Color.Empty;
                     txtEditora.BackColor = Color.Empty;
                     txtGenero.BackColor = Color.Empty;
@@ -277,8 +262,150 @@ namespace SOVD
 
         private void configuraçõesDaContaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            switchPnl(pnlAccountSettings);
-        } 
+            throw new NotImplementedException();
+        }
+        #endregion
+        //----------------------//
+        //----------------------//
+        //----------------------//
+        #region "não me atrevo a mexer em codigos marcianos"
+        Livro b = new Livro();
+        LivrosDAO bdao = new LivrosDAO();
+        private void btnCadProd_Click(object sender, EventArgs e)
+        {
+
+            if (txtFile.Text == string.Empty || txtTitle.Text == string.Empty || txtPrice.Text == string.Empty ||
+                txtYear.Text == string.Empty || txtAutors.Text == string.Empty || txtEdition.Text == string.Empty ||
+                txtEditora.Text == string.Empty || cmbType.Text == string.Empty || txtGenero.Text == string.Empty ||
+                txtSinopse.Text == string.Empty)
+            {
+                if (txtFile.Text == string.Empty) txtFile.BackColor = Color.Salmon;
+                if (txtTitle.Text == string.Empty) txtTitle.BackColor = Color.Salmon;
+                if (txtPrice.Text == string.Empty) txtPrice.BackColor = Color.Salmon;
+                if (txtYear.Text == string.Empty) txtYear.BackColor = Color.Salmon;
+                if (txtAutors.Text == string.Empty) txtAutors.BackColor = Color.Salmon;
+                if (txtEdition.Text == string.Empty) txtEdition.BackColor = Color.Salmon;
+                if (txtEditora.Text == string.Empty) txtEditora.BackColor = Color.Salmon;
+                if (cmbType.Text == string.Empty) cmbType.BackColor = Color.Salmon;
+                if (txtGenero.Text == string.Empty) txtGenero.BackColor = Color.Salmon;
+                if (txtSinopse.Text == string.Empty) txtSinopse.BackColor = Color.Salmon;
+                MessageBox.Show("Preencha os campos em Rosa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    if (System.IO.Path.GetExtension(txtFile.Text) == ".pdf")
+                    {
+                        try
+                        {
+                            string FileName = System.IO.Path.GetFileName(txtFile.Text);
+                            string newLocation = EnderecoCadastro() + FileName;
+                            System.IO.File.Move(txtFile.Text, EnderecoCadastro() + FileName);
+                            b.File = newLocation.ToString().Replace('\\', '/');
+                            b.Title = txtTitle.Text;
+                            b.Price = Convert.ToDouble(txtPrice.Text);
+                            if (txtSubT.Text == string.Empty) b.Subtitle = null; else b.Subtitle = txtSubT.Text;
+                            b.Year = txtYear.Text;
+                            b.Authors = txtAutors.Text;
+                            b.Edicao = Convert.ToInt32(txtEdition.Text);
+                            b.Publisher = txtEditora.Text;
+                            b.Type = Convert.ToInt32(cmbType.SelectedValue);
+                            b.Gender = txtGenero.Text;
+                            b.Sinopse = txtSinopse.Text;
+                            bdao.inserir(b);
+                            txtAutors.Text = string.Empty;
+                            txtEdition.Text = string.Empty;
+                            txtEditora.Text = string.Empty;
+                            txtFile.Text = string.Empty;
+                            txtGenero.Text = string.Empty;
+                            txtPrice.Text = string.Empty;
+                            txtSinopse.Text = string.Empty;
+                            txtSubT.Text = string.Empty;
+                            txtTitle.Text = string.Empty;
+                            txtYear.Text = string.Empty;
+                            cmbType.Text = string.Empty;
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Reveja o endereço.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else MessageBox.Show("Tipo de arquivo não compativel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Reveja os Dados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+        private void lstDragDropFile_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void lstDragDropFile_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] FileList = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            foreach (string File in FileList)
+            {
+                if (System.IO.Path.GetExtension(File) == ".pdf")
+                    txtFile.Text = File;
+                else MessageBox.Show("Tipo de arquivo não compativel.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public string EnderecoCadastro()
+        {
+
+            string DebugE = (System.AppDomain.CurrentDomain.BaseDirectory.ToString());
+            return DebugE + @"Livros/";
+
+        }
+        #endregion
+        //----------------------//
+        //----------------------//
+        //----------------------//
+        #region "pnlAdminConfig"
+        private void pnlSearch_VisibleChanged(object sender, EventArgs e)
+        {
+            CargoDAO cargodao = new CargoDAO();
+            dgvFuncs.DataSource = cargodao.listarPraSearch();
+            if (cmbTipoPesquisaFunc.Items.Count <= 0)
+            {
+                foreach (DataColumn item in (dgvFuncs.DataSource as DataTable).Columns)
+                    cmbTipoPesquisaFunc.Items.Add(item.ColumnName);
+                cmbTipoPesquisaFunc.SelectedIndex = 1;
+            }
+        }
+
+        private void btSearchfunc_Click(object sender, EventArgs e)
+        {
+            int i;
+            List<string> keywords = new List<string>();
+            keywords.AddRange(mtbSearch.Text.Split(' '));
+
+            string sqlCmdLine = "SELECT id, nome, sobrenome, setor, cbo, email FROM cargo"
+                + " WHERE ";
+            for (i = 0; i < keywords.Count - 1; i++)
+            {
+                sqlCmdLine += cbSearchType.SelectedText + " LIKE '%" + keywords[i] + "%' OR ";
+            }
+            sqlCmdLine += cbSearchType.Text + " LIKE '%" + keywords[i] + "%'";
+            //Forma o codigo do mysql pra fazer a pesquisa : sqlCmdLine
+            DAO dao = new DAO();
+            dgSearch.DataSource = dao.Load_Table(sqlCmdLine);
+        }
+
+        private void minharola()
+        {
+
+        }
         #endregion
     }
 }
