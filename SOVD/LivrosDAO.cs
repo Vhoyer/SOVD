@@ -24,8 +24,8 @@ namespace SOVD
             return Load_Table("SELECT "
                 + "idProd, title, subtitle, autors,"
                 + " publisher, genders, price, year,"
-                + " edition, type"
-                + " FROM prod");
+                + " edition, TipoProd"
+                + " FROM prod JOIN tipoprod ON type = idTipoProd");
         }
 
         public void Search(Livro livro)

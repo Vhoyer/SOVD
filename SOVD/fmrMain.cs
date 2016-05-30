@@ -26,7 +26,7 @@ namespace SOVD
             pnlWelcome.BringToFront();
             Conexao.criar_Conexao();
             LivrosDAO livrodao = new LivrosDAO();
-            dgSearch.DataSource = livrodao.selectAll();
+            dgSearch.DataSource = livrodao.SelectForSearch();
 
             foreach (DataColumn item in (dgSearch.DataSource as DataTable).Columns)
             {
@@ -170,8 +170,8 @@ namespace SOVD
             string sqlCmdLine = "SELECT "
                 + "idProd, title, subtitle, autors,"
                 + " publisher, genders, price, year,"
-                + " edition, type"
-                + " FROM prod WHERE ";
+                + " edition, TipoProd"
+                + " FROM prod JOIN tipoprod ON type = idTipoProd WHERE ";
             for (i = 0; i < keywords.Count - 1; i++)
             {
                 sqlCmdLine += cbSearchType.SelectedText + " LIKE '%" + keywords[i] + "%' OR ";
@@ -242,8 +242,7 @@ namespace SOVD
                     book.Type = Convert.ToInt32(cmbTipo.SelectedValue);
                     //----
                     txtAutores.BackColor = Color.Empty;
-                    txtEditora.BackColor = Color.Empty;
-                    txtGenero.BackColor = Color.Empty;
+                    txtEdição.BackColor = Color.Empty;
                     txtPreco.BackColor = Color.Empty;
                     txtSinopse.BackColor = Color.Empty;
                     txtTitulo.BackColor = Color.Empty;
@@ -307,8 +306,8 @@ namespace SOVD
                     try
                     {
                         string FileName = System.IO.Path.GetFileName(txtFile.Text);
-                        string newLocation = EnderecoCadastro() + FileName;
-                        System.IO.File.Copy(txtFile.Text, EnderecoCadastro() + FileName);
+                        string newLocation = (EnderecoCadastro() + FileName).Replace("'".ToCharArray()[0],' ');
+                        System.IO.File.Copy(txtFile.Text, newLocation,true);
                         b.File = newLocation.ToString().Replace('\\', '/');
                         b.Title = txtTitle.Text;
                         b.Price = Convert.ToDouble(txtPrice.Text);
@@ -335,7 +334,13 @@ namespace SOVD
                         MessageBox.Show("Cadastrado com sucesso");
                         LivrosDAO livrodao = new LivrosDAO();
                         dgSearch.DataSource = livrodao.selectAll();
-                        
+                        //--
+                        txtFile.BackColor = Color.Empty;
+                        txtTitle.BackColor = Color.Empty;
+                        txtPrice.BackColor = Color.Empty;
+                        txtAutors.BackColor = Color.Empty;
+                        txtEdition.BackColor = Color.Empty;
+                        txtAbs.BackColor = Color.Empty;
                     }
                     catch
                     {

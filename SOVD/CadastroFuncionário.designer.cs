@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroFuncionário));
             this.txtNomeFunc = new System.Windows.Forms.TextBox();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.txtCBO = new System.Windows.Forms.TextBox();
@@ -356,6 +357,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 269);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroFuncionário";
             this.Text = "Funcionário";
             this.Load += new System.EventHandler(this.frmCadastroFuncionário_Load);

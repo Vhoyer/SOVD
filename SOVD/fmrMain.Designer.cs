@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -559,6 +560,8 @@
             // 
             // pnlWelcome
             // 
+            this.pnlWelcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlWelcome.BackgroundImage")));
+            this.pnlWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlWelcome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlWelcome.Location = new System.Drawing.Point(0, 24);
             this.pnlWelcome.Name = "pnlWelcome";
@@ -567,6 +570,9 @@
             // 
             // pnlCadBook
             // 
+            this.pnlCadBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCadBook.Controls.Add(this.btnCadProd);
             this.pnlCadBook.Controls.Add(this.label25);
             this.pnlCadBook.Controls.Add(this.cmbType);
@@ -594,7 +600,6 @@
             this.pnlCadBook.Controls.Add(this.lstDragDropFile);
             this.pnlCadBook.Controls.Add(this.btnCancel2);
             this.pnlCadBook.Controls.Add(this.lblPnlName2);
-            this.pnlCadBook.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCadBook.Location = new System.Drawing.Point(0, 24);
             this.pnlCadBook.Name = "pnlCadBook";
             this.pnlCadBook.Size = new System.Drawing.Size(784, 437);
@@ -602,6 +607,7 @@
             // 
             // btnCadProd
             // 
+            this.btnCadProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadProd.Location = new System.Drawing.Point(615, 258);
             this.btnCadProd.Name = "btnCadProd";
             this.btnCadProd.Size = new System.Drawing.Size(115, 69);
@@ -612,6 +618,7 @@
             // 
             // label25
             // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(413, 174);
             this.label25.Name = "label25";
@@ -621,6 +628,7 @@
             // 
             // cmbType
             // 
+            this.cmbType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.Location = new System.Drawing.Point(462, 169);
             this.cmbType.Name = "cmbType";
@@ -629,6 +637,7 @@
             // 
             // txtEdition
             // 
+            this.txtEdition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEdition.Location = new System.Drawing.Point(462, 137);
             this.txtEdition.Name = "txtEdition";
             this.txtEdition.Size = new System.Drawing.Size(115, 20);
@@ -636,6 +645,7 @@
             // 
             // label26
             // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(413, 140);
             this.label26.Name = "label26";
@@ -645,6 +655,8 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(113, 205);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 20);
@@ -662,6 +674,7 @@
             // 
             // txtYear
             // 
+            this.txtYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYear.Location = new System.Drawing.Point(462, 103);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(115, 20);
@@ -669,6 +682,7 @@
             // 
             // label28
             // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(413, 106);
             this.label28.Name = "label28";
@@ -687,6 +701,8 @@
             // 
             // txtSubT
             // 
+            this.txtSubT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubT.Location = new System.Drawing.Point(113, 103);
             this.txtSubT.Name = "txtSubT";
             this.txtSubT.Size = new System.Drawing.Size(294, 20);
@@ -694,6 +710,8 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(113, 171);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(294, 20);
@@ -710,6 +728,8 @@
             // 
             // txtAutors
             // 
+            this.txtAutors.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutors.Location = new System.Drawing.Point(113, 137);
             this.txtAutors.Name = "txtAutors";
             this.txtAutors.Size = new System.Drawing.Size(294, 20);
@@ -726,6 +746,9 @@
             // 
             // txtAbs
             // 
+            this.txtAbs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAbs.Location = new System.Drawing.Point(58, 258);
             this.txtAbs.Multiline = true;
             this.txtAbs.Name = "txtAbs";
@@ -743,6 +766,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrice.Location = new System.Drawing.Point(462, 69);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(115, 20);
@@ -750,6 +774,7 @@
             // 
             // label33
             // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(413, 72);
             this.label33.Name = "label33";
@@ -768,6 +793,8 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.Location = new System.Drawing.Point(113, 69);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(294, 20);
@@ -784,6 +811,8 @@
             // 
             // txtFile
             // 
+            this.txtFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFile.Location = new System.Drawing.Point(113, 35);
             this.txtFile.Name = "txtFile";
             this.txtFile.Size = new System.Drawing.Size(464, 20);
@@ -791,6 +820,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(615, 35);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 23);
@@ -802,10 +832,11 @@
             // lstDragDropFile
             // 
             this.lstDragDropFile.AllowDrop = true;
+            this.lstDragDropFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
             this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2});
             this.lstDragDropFile.LabelWrap = false;
             this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
             this.lstDragDropFile.MultiSelect = false;
@@ -818,6 +849,7 @@
             // 
             // btnCancel2
             // 
+            this.btnCancel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel2.Location = new System.Drawing.Point(615, 333);
             this.btnCancel2.Name = "btnCancel2";
             this.btnCancel2.Size = new System.Drawing.Size(115, 69);
@@ -979,13 +1011,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.pnlCadBook);
             this.Controls.Add(this.pnlSearch);
-            this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.pnlAdminConfigs);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "frmMain";
             this.Text = "SOVD";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);

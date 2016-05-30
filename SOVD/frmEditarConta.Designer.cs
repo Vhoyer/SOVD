@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarConta));
             this.chkvisu = new System.Windows.Forms.CheckBox();
             this.btnnovasenha = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNewMail = new System.Windows.Forms.Label();
+            this.txtNewMail = new System.Windows.Forms.TextBox();
             this.chkvisu2 = new System.Windows.Forms.CheckBox();
             this.txtnovasenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtagain = new System.Windows.Forms.TextBox();
-            this.lblNewMail = new System.Windows.Forms.Label();
-            this.txtNewMail = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,6 +120,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Novas Informações";
             // 
+            // lblNewMail
+            // 
+            this.lblNewMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNewMail.AutoSize = true;
+            this.lblNewMail.Location = new System.Drawing.Point(46, 114);
+            this.lblNewMail.Name = "lblNewMail";
+            this.lblNewMail.Size = new System.Drawing.Size(108, 13);
+            this.lblNewMail.TabIndex = 29;
+            this.lblNewMail.Text = "Digite um novo email:";
+            // 
+            // txtNewMail
+            // 
+            this.txtNewMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNewMail.Enabled = false;
+            this.txtNewMail.Location = new System.Drawing.Point(49, 135);
+            this.txtNewMail.Name = "txtNewMail";
+            this.txtNewMail.Size = new System.Drawing.Size(249, 20);
+            this.txtNewMail.TabIndex = 28;
+            // 
             // chkvisu2
             // 
             this.chkvisu2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -174,27 +196,6 @@
             this.txtagain.TabIndex = 23;
             this.txtagain.UseSystemPasswordChar = true;
             // 
-            // lblNewMail
-            // 
-            this.lblNewMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNewMail.AutoSize = true;
-            this.lblNewMail.Location = new System.Drawing.Point(46, 114);
-            this.lblNewMail.Name = "lblNewMail";
-            this.lblNewMail.Size = new System.Drawing.Size(108, 13);
-            this.lblNewMail.TabIndex = 29;
-            this.lblNewMail.Text = "Digite um novo email:";
-            // 
-            // txtNewMail
-            // 
-            this.txtNewMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNewMail.Enabled = false;
-            this.txtNewMail.Location = new System.Drawing.Point(49, 135);
-            this.txtNewMail.Name = "txtNewMail";
-            this.txtNewMail.Size = new System.Drawing.Size(249, 20);
-            this.txtNewMail.TabIndex = 28;
-            // 
             // frmEditarConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +207,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtsenha);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditarConta";
             this.Text = "Editar Conta";
             this.groupBox1.ResumeLayout(false);

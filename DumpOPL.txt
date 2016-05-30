@@ -117,6 +117,16 @@ CREATE TABLE `tipoprod` (
   PRIMARY KEY (`idTipoProd`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipoprod`
+--
+
+LOCK TABLES `tipoprod` WRITE;
+/*!40000 ALTER TABLE `tipoprod` DISABLE KEYS */;
+INSERT INTO `tipoprod` VALUES (1,'Ebook'),(2,'Revista'),(3,'HQ');
+/*!40000 ALTER TABLE `tipoprod` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
