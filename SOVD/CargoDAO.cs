@@ -60,5 +60,10 @@ namespace SOVD
         {
             executarComando("UPDATE cargo SET nome = '" + cargo.Nome + "', sobrenome = '" + cargo.Sobrenome + "', setor = '" + cargo.Setor + "', funcao = '" + cargo.Funcao + "', cbo = '" + cargo.Cbo + "', salario_mensal = '" + cargo.Salario_mensal.ToString().Replace(',', '.') + "', horas_trabalhadas = '" + cargo.Horas_trabalhadas + "' WHERE id = '" + cargo.Id + "';");
         }
+
+        public void delete(int id)
+        {
+            executarComando("DELETE FROM cargo WHERE id = '" + id + "';");
+        }
     }
 }

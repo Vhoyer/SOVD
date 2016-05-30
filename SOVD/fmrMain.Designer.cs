@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("  Arraste o arquivo");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesDaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,6 +106,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCadNewfunc = new System.Windows.Forms.Button();
             this.btnEditFunc = new System.Windows.Forms.Button();
+            this.btnExcluFunc = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.mksSearch = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -327,7 +328,7 @@
             this.pnlEdit.Location = new System.Drawing.Point(0, 24);
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Size = new System.Drawing.Size(784, 437);
-            this.pnlEdit.TabIndex = 9;
+            this.pnlEdit.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
@@ -347,7 +348,7 @@
             this.btnAlt.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
             this.btnAlt.Name = "btnAlt";
             this.btnAlt.Size = new System.Drawing.Size(75, 23);
-            this.btnAlt.TabIndex = 48;
+            this.btnAlt.TabIndex = 10;
             this.btnAlt.Text = "Alterar";
             this.btnAlt.UseVisualStyleBackColor = true;
             this.btnAlt.Click += new System.EventHandler(this.btnAlt_Click);
@@ -358,7 +359,7 @@
             this.btnExc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
             this.btnExc.Name = "btnExc";
             this.btnExc.Size = new System.Drawing.Size(75, 23);
-            this.btnExc.TabIndex = 49;
+            this.btnExc.TabIndex = 11;
             this.btnExc.Text = "Excluir livro";
             this.btnExc.UseVisualStyleBackColor = true;
             this.btnExc.Click += new System.EventHandler(this.btnExc_Click);
@@ -369,7 +370,7 @@
             this.btnCancelarAlt.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
             this.btnCancelarAlt.Name = "btnCancelarAlt";
             this.btnCancelarAlt.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarAlt.TabIndex = 2;
+            this.btnCancelarAlt.TabIndex = 12;
             this.btnCancelarAlt.TabStop = false;
             this.btnCancelarAlt.Text = "Cancelar";
             this.btnCancelarAlt.UseVisualStyleBackColor = true;
@@ -381,7 +382,7 @@
             this.txtAno.Location = new System.Drawing.Point(555, 76);
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(183, 20);
-            this.txtAno.TabIndex = 52;
+            this.txtAno.TabIndex = 6;
             // 
             // cmbTipo
             // 
@@ -391,7 +392,7 @@
             this.cmbTipo.Location = new System.Drawing.Point(555, 141);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(183, 21);
-            this.cmbTipo.TabIndex = 50;
+            this.cmbTipo.TabIndex = 8;
             // 
             // txtTitulo
             // 
@@ -400,7 +401,7 @@
             this.txtTitulo.Location = new System.Drawing.Point(108, 42);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(398, 20);
-            this.txtTitulo.TabIndex = 46;
+            this.txtTitulo.TabIndex = 0;
             // 
             // txtSubtitulo
             // 
@@ -409,7 +410,7 @@
             this.txtSubtitulo.Location = new System.Drawing.Point(108, 72);
             this.txtSubtitulo.Name = "txtSubtitulo";
             this.txtSubtitulo.Size = new System.Drawing.Size(398, 20);
-            this.txtSubtitulo.TabIndex = 45;
+            this.txtSubtitulo.TabIndex = 1;
             // 
             // txtAutores
             // 
@@ -418,7 +419,7 @@
             this.txtAutores.Location = new System.Drawing.Point(108, 107);
             this.txtAutores.Name = "txtAutores";
             this.txtAutores.Size = new System.Drawing.Size(398, 20);
-            this.txtAutores.TabIndex = 44;
+            this.txtAutores.TabIndex = 2;
             // 
             // txtEditora
             // 
@@ -427,7 +428,7 @@
             this.txtEditora.Location = new System.Drawing.Point(108, 138);
             this.txtEditora.Name = "txtEditora";
             this.txtEditora.Size = new System.Drawing.Size(398, 20);
-            this.txtEditora.TabIndex = 43;
+            this.txtEditora.TabIndex = 3;
             // 
             // txtGenero
             // 
@@ -436,7 +437,7 @@
             this.txtGenero.Location = new System.Drawing.Point(108, 173);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(398, 20);
-            this.txtGenero.TabIndex = 42;
+            this.txtGenero.TabIndex = 4;
             // 
             // txtSinopse
             // 
@@ -447,7 +448,7 @@
             this.txtSinopse.Multiline = true;
             this.txtSinopse.Name = "txtSinopse";
             this.txtSinopse.Size = new System.Drawing.Size(759, 168);
-            this.txtSinopse.TabIndex = 41;
+            this.txtSinopse.TabIndex = 9;
             // 
             // txtPreco
             // 
@@ -455,7 +456,7 @@
             this.txtPreco.Location = new System.Drawing.Point(555, 45);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(183, 20);
-            this.txtPreco.TabIndex = 40;
+            this.txtPreco.TabIndex = 5;
             // 
             // txtEdição
             // 
@@ -463,7 +464,7 @@
             this.txtEdição.Location = new System.Drawing.Point(555, 107);
             this.txtEdição.Name = "txtEdição";
             this.txtEdição.Size = new System.Drawing.Size(183, 20);
-            this.txtEdição.TabIndex = 39;
+            this.txtEdição.TabIndex = 7;
             // 
             // label11
             // 
@@ -611,7 +612,7 @@
             this.btnCadProd.Location = new System.Drawing.Point(615, 258);
             this.btnCadProd.Name = "btnCadProd";
             this.btnCadProd.Size = new System.Drawing.Size(115, 69);
-            this.btnCadProd.TabIndex = 80;
+            this.btnCadProd.TabIndex = 11;
             this.btnCadProd.Text = "Cadastrar";
             this.btnCadProd.UseVisualStyleBackColor = true;
             this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
@@ -633,7 +634,7 @@
             this.cmbType.Location = new System.Drawing.Point(462, 169);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(115, 21);
-            this.cmbType.TabIndex = 55;
+            this.cmbType.TabIndex = 9;
             // 
             // txtEdition
             // 
@@ -641,7 +642,7 @@
             this.txtEdition.Location = new System.Drawing.Point(462, 137);
             this.txtEdition.Name = "txtEdition";
             this.txtEdition.Size = new System.Drawing.Size(115, 20);
-            this.txtEdition.TabIndex = 78;
+            this.txtEdition.TabIndex = 8;
             // 
             // label26
             // 
@@ -660,8 +661,7 @@
             this.textBox1.Location = new System.Drawing.Point(113, 205);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 20);
-            this.textBox1.TabIndex = 76;
-            this.textBox1.Text = " ";
+            this.textBox1.TabIndex = 5;
             // 
             // label27
             // 
@@ -678,7 +678,7 @@
             this.txtYear.Location = new System.Drawing.Point(462, 103);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(115, 20);
-            this.txtYear.TabIndex = 74;
+            this.txtYear.TabIndex = 7;
             // 
             // label28
             // 
@@ -706,7 +706,7 @@
             this.txtSubT.Location = new System.Drawing.Point(113, 103);
             this.txtSubT.Name = "txtSubT";
             this.txtSubT.Size = new System.Drawing.Size(294, 20);
-            this.txtSubT.TabIndex = 71;
+            this.txtSubT.TabIndex = 2;
             // 
             // textBox2
             // 
@@ -715,7 +715,7 @@
             this.textBox2.Location = new System.Drawing.Point(113, 171);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(294, 20);
-            this.textBox2.TabIndex = 70;
+            this.textBox2.TabIndex = 4;
             // 
             // label30
             // 
@@ -733,7 +733,7 @@
             this.txtAutors.Location = new System.Drawing.Point(113, 137);
             this.txtAutors.Name = "txtAutors";
             this.txtAutors.Size = new System.Drawing.Size(294, 20);
-            this.txtAutors.TabIndex = 68;
+            this.txtAutors.TabIndex = 3;
             // 
             // label31
             // 
@@ -753,7 +753,7 @@
             this.txtAbs.Multiline = true;
             this.txtAbs.Name = "txtAbs";
             this.txtAbs.Size = new System.Drawing.Size(519, 144);
-            this.txtAbs.TabIndex = 66;
+            this.txtAbs.TabIndex = 10;
             // 
             // label32
             // 
@@ -770,7 +770,7 @@
             this.txtPrice.Location = new System.Drawing.Point(462, 69);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(115, 20);
-            this.txtPrice.TabIndex = 64;
+            this.txtPrice.TabIndex = 6;
             // 
             // label33
             // 
@@ -798,7 +798,7 @@
             this.txtTitle.Location = new System.Drawing.Point(113, 69);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(294, 20);
-            this.txtTitle.TabIndex = 61;
+            this.txtTitle.TabIndex = 1;
             // 
             // label35
             // 
@@ -816,7 +816,7 @@
             this.txtFile.Location = new System.Drawing.Point(113, 35);
             this.txtFile.Name = "txtFile";
             this.txtFile.Size = new System.Drawing.Size(464, 20);
-            this.txtFile.TabIndex = 59;
+            this.txtFile.TabIndex = 0;
             // 
             // button3
             // 
@@ -824,7 +824,7 @@
             this.button3.Location = new System.Drawing.Point(615, 35);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 23);
-            this.button3.TabIndex = 58;
+            this.button3.TabIndex = 13;
             this.button3.Text = "Procurar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btnProcuraArq_Click);
@@ -835,8 +835,8 @@
             this.lstDragDropFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstDragDropFile.BackColor = System.Drawing.SystemColors.Control;
             this.lstDragDropFile.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem5,
+            listViewItem6});
             this.lstDragDropFile.LabelWrap = false;
             this.lstDragDropFile.Location = new System.Drawing.Point(583, 72);
             this.lstDragDropFile.MultiSelect = false;
@@ -853,7 +853,7 @@
             this.btnCancel2.Location = new System.Drawing.Point(615, 333);
             this.btnCancel2.Name = "btnCancel2";
             this.btnCancel2.Size = new System.Drawing.Size(115, 69);
-            this.btnCancel2.TabIndex = 56;
+            this.btnCancel2.TabIndex = 12;
             this.btnCancel2.Text = "Cancelar";
             this.btnCancel2.UseVisualStyleBackColor = true;
             this.btnCancel2.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -888,6 +888,7 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnCadNewfunc);
             this.flowLayoutPanel2.Controls.Add(this.btnEditFunc);
+            this.flowLayoutPanel2.Controls.Add(this.btnExcluFunc);
             this.flowLayoutPanel2.Controls.Add(this.btnCancel);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 405);
@@ -920,9 +921,21 @@
             this.btnEditFunc.UseVisualStyleBackColor = true;
             this.btnEditFunc.Click += new System.EventHandler(this.btnEditFunc_Click);
             // 
+            // btnExcluFunc
+            // 
+            this.btnExcluFunc.Location = new System.Drawing.Point(523, 3);
+            this.btnExcluFunc.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
+            this.btnExcluFunc.Name = "btnExcluFunc";
+            this.btnExcluFunc.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluFunc.TabIndex = 7;
+            this.btnExcluFunc.TabStop = false;
+            this.btnExcluFunc.Text = "Excluir";
+            this.btnExcluFunc.UseVisualStyleBackColor = true;
+            this.btnExcluFunc.Click += new System.EventHandler(this.btnExcluFunc_Click);
+            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(523, 3);
+            this.btnCancel.Location = new System.Drawing.Point(435, 3);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(10, 3, 3, 6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -1013,8 +1026,8 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.pnlCadBook);
-            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlEdit);
+            this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.pnlAdminConfigs);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1129,6 +1142,7 @@
         private System.Windows.Forms.Label lblPnlName3;
         private System.Windows.Forms.Label lblPnlName2;
         private System.Windows.Forms.Label lblPnlName1;
+        private System.Windows.Forms.Button btnExcluFunc;
     }
 }
 

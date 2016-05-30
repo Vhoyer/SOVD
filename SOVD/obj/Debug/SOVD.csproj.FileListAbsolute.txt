@@ -11,3 +11,16 @@ C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmMain.resour
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmLogin.resources
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmCadastroFuncionário.resources
 C:\Users\vhoye\OneDrive\programas\Csharp\SOVD\SOVD\obj\Debug\SOVD.frmEditarConta.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\bin\Debug\SOVD.exe.config
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.exe
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.pdb
+D:\TI\TI2015-1\CD\SOVD\SOVD\bin\Debug\SOVD.exe
+D:\TI\TI2015-1\CD\SOVD\SOVD\bin\Debug\SOVD.pdb
+D:\TI\TI2015-1\CD\SOVD\SOVD\bin\Debug\mysql.data.dll
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.csprojResolveAssemblyReference.cache
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.frmCadastroFuncionário.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.frmMain.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.frmEditarConta.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.frmLogin.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.Properties.Resources.resources
+D:\TI\TI2015-1\CD\SOVD\SOVD\obj\Debug\SOVD.csproj.GenerateResource.Cache

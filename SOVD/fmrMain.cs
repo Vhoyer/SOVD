@@ -153,12 +153,14 @@ namespace SOVD
 
         private void dgSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            open_Edit(Convert.ToInt32(dgSearch.CurrentRow.Cells[0].Value));
+            try{ open_Edit(Convert.ToInt32(dgSearch.CurrentRow.Cells[0].Value)); }
+            catch (Exception){ }
         }
 
         private void btEdit_Click(object sender, EventArgs e)
         {
-            open_Edit(Convert.ToInt32(dgSearch.CurrentRow.Cells[0].Value));
+            try { open_Edit(Convert.ToInt32(dgSearch.CurrentRow.Cells[0].Value)); }
+            catch (Exception) { }
         }
 
         private void btSearch_Click(object sender, EventArgs e)
@@ -403,6 +405,18 @@ namespace SOVD
         //----------------------//
         //----------------------//
         #region "pnlAdminConfig"
+        private void btnExcluFunc_Click(object sender, EventArgs e)
+        {
+            CargoDAO dao = new CargoDAO();
+            if (MessageBox.Show("Deseja mesmo deletar esse cadastro?","Confirmação", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
+            {
+                dao.delete(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value));
+                MessageBox.Show("Deletado com sucesso");
+                CargoDAO cargodao = new CargoDAO();
+                dgvFuncs.DataSource = cargodao.listarPraSearch();
+            }
+        }
+
         private void pnlSearch_VisibleChanged(object sender, EventArgs e)
         {
             CargoDAO cargodao = new CargoDAO();
@@ -451,11 +465,13 @@ namespace SOVD
 
         private void dgvFuncs_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value));
+            try { openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value)); }
+            catch (Exception) { }
         }
         private void btnEditFunc_Click(object sender, EventArgs e)
         {
-            openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value));
+            try { openEdit(Convert.ToInt32(dgvFuncs.CurrentRow.Cells[0].Value)); }
+            catch (Exception) { }
         }
         #endregion
     }
