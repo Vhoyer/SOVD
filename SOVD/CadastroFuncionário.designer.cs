@@ -85,14 +85,14 @@
             this.txtCBO.Location = new System.Drawing.Point(101, 111);
             this.txtCBO.Name = "txtCBO";
             this.txtCBO.Size = new System.Drawing.Size(100, 20);
-            this.txtCBO.TabIndex = 2;
+            this.txtCBO.TabIndex = 4;
             // 
             // txtSenha
             // 
             this.txtSenha.Location = new System.Drawing.Point(114, 93);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtSenha.TabIndex = 3;
+            this.txtSenha.TabIndex = 10;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtConfirmarEmail
@@ -100,7 +100,7 @@
             this.txtConfirmarEmail.Location = new System.Drawing.Point(114, 67);
             this.txtConfirmarEmail.Name = "txtConfirmarEmail";
             this.txtConfirmarEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtConfirmarEmail.TabIndex = 4;
+            this.txtConfirmarEmail.TabIndex = 9;
             // 
             // label1
             // 
@@ -168,7 +168,7 @@
             this.txtConfirmarSenha.Location = new System.Drawing.Point(114, 119);
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtConfirmarSenha.TabIndex = 12;
+            this.txtConfirmarSenha.TabIndex = 11;
             this.txtConfirmarSenha.UseSystemPasswordChar = true;
             // 
             // label7
@@ -194,7 +194,7 @@
             this.txtSetor.Location = new System.Drawing.Point(101, 59);
             this.txtSetor.Name = "txtSetor";
             this.txtSetor.Size = new System.Drawing.Size(100, 20);
-            this.txtSetor.TabIndex = 15;
+            this.txtSetor.TabIndex = 2;
             // 
             // grpAccout_e_email
             // 
@@ -229,7 +229,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(114, 15);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 14;
+            this.txtUsuario.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -264,7 +264,7 @@
             this.txtFuncao.Location = new System.Drawing.Point(101, 85);
             this.txtFuncao.Name = "txtFuncao";
             this.txtFuncao.Size = new System.Drawing.Size(100, 20);
-            this.txtFuncao.TabIndex = 16;
+            this.txtFuncao.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -302,21 +302,21 @@
             this.txtHorasTrabson.Location = new System.Drawing.Point(148, 42);
             this.txtHorasTrabson.Name = "txtHorasTrabson";
             this.txtHorasTrabson.Size = new System.Drawing.Size(100, 20);
-            this.txtHorasTrabson.TabIndex = 19;
+            this.txtHorasTrabson.TabIndex = 6;
             // 
             // txtSalario
             // 
             this.txtSalario.Location = new System.Drawing.Point(148, 19);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
-            this.txtSalario.TabIndex = 18;
+            this.txtSalario.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(294, 193);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 54);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -349,7 +349,7 @@
             this.cmbLevel.Location = new System.Drawing.Point(329, 160);
             this.cmbLevel.Name = "cmbLevel";
             this.cmbLevel.Size = new System.Drawing.Size(121, 21);
-            this.cmbLevel.TabIndex = 20;
+            this.cmbLevel.TabIndex = 12;
             // 
             // frmCadastroFuncionário
             // 

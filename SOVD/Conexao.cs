@@ -26,7 +26,7 @@ namespace SOVD
             }
 
             // serve para configurar os parametros do banco de dados
-            string configuracao = string.Format("server={0};user id={1}; password={2};database=mysql; pooling=false", "127.0.0.1", "root", "ALUNOS");
+            string configuracao = string.Format("server={0};user id={1}; password={2};database=mysql; pooling=false", "127.0.0.1", "root", "root@612");
 
             // tenta estabelecer conectar
             try
